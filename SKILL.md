@@ -1,6 +1,6 @@
 ---
 name: "skill-suggest"
-description: "Scan the current project's files and a task description to suggest relevant skills — from both installed skills and the online registry. Run manually when starting a new project or task."
+description: "Scan the current project's files and task description to suggest relevant skills, auto-demote unused ones to name-only, and optionally search online registries (skills.sh, clawhub.ai). Run at the start of each project."
 user-invocable: true
 ---
 
@@ -8,7 +8,7 @@ user-invocable: true
 
 Analyzes the current directory and your task description, then recommends skills from:
 - **Installed skills** on this machine (`~/.claude/skills/`)
-- **Online registry** (anthropics/claude-code-skills on GitHub)
+- **Online registries** (skills.sh, clawhub.ai)
 
 ## Usage
 
@@ -20,7 +20,7 @@ Analyzes the current directory and your task description, then recommends skills
 
 ## ⚠️ Critical Rules — Read Before Anything Else
 
-1. **There is NO skills CLI.** No `claude skills`, no `npx skills install`, no `gemini skills`, no install command of any kind. Never run or suggest such commands. Skills are markdown files — managing them means reading/writing JSON files directly.
+1. **The skills CLI is `npx skills`.** The correct install command is `npx skills add <owner/repo>` (e.g. `npx skills add vercel-labs/agent-skills`). Commands that do NOT exist: `claude skills install`, `npx skills install`, `gemini skills`. Never invent subcommands — use only: `add`, `remove`, `list`, `find`, `update`, `init`.
 2. **"Local" means `.claude/settings.local.json`**, not copying files. Never copy skill directories.
 3. **Step 4b is mandatory.** Always call `AskUserQuestion` with the exact questions defined in Step 4b before showing output. Never substitute your own questions.
 4. **Never ask about "where to install"** — there is no install. There is only activating (writing `"on"` to `settings.local.json`) or trimming (writing `"name-only"`).
@@ -161,7 +161,13 @@ done
 
 ### Step 3: Fetch online registry (Conditional)
 
-**Skip this step entirely** — the official skills registry is not publicly available. Do not attempt any WebFetch for skill discovery. Work only from the installed skills found in Step 2.
+Only run this step when the user invokes `/skill-suggest online`. For fast/task modes, skip it.
+
+Two registries to search:
+- **https://skills.sh/** — browse or search for community skills by tag/language
+- **https://clawhub.ai/** — search for Claude Code skills by name or stack
+
+Use `WebFetch` to retrieve results from these URLs. Extract skill names and descriptions relevant to the detected project stack. Add any matches as `registry` entries in the scoring pool — label them `[not installed]` in the output table with the action `npx skills add <owner/repo>` where `owner/repo` is taken **directly from the registry page result**. If the registry page does not provide a repo slug, show the registry URL instead and do not guess.
 
 ### Step 4: Score and suggest
 
@@ -195,10 +201,37 @@ Score skills from all sources against the project fingerprint and **current dire
 
 ### Step 4b: AskUserQuestion — MANDATORY
 
-**Call `AskUserQuestion` now. Do not output text first. Use this exact call structure. Maximum 2 questions — never add a third question about CLAUDE.md, scope, or anything else:**
+**Before calling AskUserQuestion, classify every installed skill (excluding `skill-suggest`) into one of four buckets:**
+
+- **ACTIVATE_CANDIDATES** — top 4 highest-scoring skills (shown in Q1)
+- **EXPLICIT_TRIM** — globally-on skills that scored below threshold (shown in Q2, up to 4)
+- **BORDERLINE** — installed skills with a non-zero score but not in top 4; globally-on or `name-only`; not already in ACTIVATE_CANDIDATES or EXPLICIT_TRIM (shown in Q3, up to 4)
+- **AUTO_NAME_ONLY** — all remaining installed skills with score = 0 that are currently globally `on` and have no entry in `.claude/settings.local.json`; these are applied silently in Step 7 without asking. Skills already globally `name-only`, `off`, or `user-only` are excluded — nothing to change.
+
+**Before calling AskUserQuestion, check: does `.claude/` exist in the project root?**
+- If **no**: create it automatically with `mkdir -p .claude` — do NOT ask the user to run `/init` first.
+
+**Call `AskUserQuestion` now. Do not output text first. Use this exact call structure. Maximum 4 questions — never add a 5th:**
 
 ```
 questions: [
+  // Include Question 0 ONLY if at least one [not installed] skill was found in Step 3 (online mode).
+  // Omit entirely in fast/task modes.
+  {
+    header: "Install location",
+    question: "Where should the new skills be installed?",
+    multiSelect: false,
+    options: [
+      {
+        label: "Global",
+        description: "npx skills add <repo> — installs to ~/.agents/skills/ with symlink at ~/.claude/skills/ (available in all projects)"
+      },
+      {
+        label: "Local to this project",
+        description: "Downloads SKILL.md into .claude/skills/<name>/ — project-only, no symlink needed"
+      }
+    ]
+  },
   {
     header: "Activate for project",
     question: "Which skills do you want configured as active for this project?",
@@ -222,6 +255,18 @@ questions: [
       { label: "<skill-name>", description: "<why it doesn't fit, e.g. No PHP files found>" },
       ...
     ]
+  },
+  // Include Question 3 ONLY if BORDERLINE bucket is non-empty.
+  // Omit this entire block if no borderline skills exist.
+  {
+    header: "Keep active?",
+    question: "These skills have some relevance but aren't a strong match. Select any to keep active — unselected ones will be set to name-only:",
+    multiSelect: true,
+    options: [
+      // UP TO 4 BORDERLINE skills — show partial-match reason
+      { label: "<skill-name>", description: "<partial match signal, e.g. Dockerfile found but no k8s>" },
+      ...
+    ]
   }
 ]
 ```
@@ -229,6 +274,11 @@ questions: [
 **Do not ask about "where to install", "global vs local scope", or any other questions.** Those concepts do not apply here.
 
 **After the user submits:**
+
+0. If Q0 was shown and user selected skills to install:
+   - **Global**: run `npx skills add <owner/repo>` for each selected skill.
+   - **Local**: use `WebFetch` to download the raw SKILL.md from the registry and write it to `.claude/skills/<name>/SKILL.md`. Create the directory first.
+   - After install, re-read installed skills before proceeding so the newly installed skills appear in Q1.
 
 1. Write Q1 selections to `.claude/settings.local.json` as `"on"`:
 ```bash
@@ -252,8 +302,11 @@ PYEOF
 
 **The write is REQUIRED even if the skills are already globally installed.** The purpose is to create an explicit project-level record in `settings.local.json` — not to install anything. "Already globally installed" is NOT a reason to skip this step.
 
-2. Store Q2 selections as `TRIM_LIST` for Step 7. If Q2 was omitted or user selected nothing, `TRIM_LIST` is empty — skip Step 7.
-3. Proceed directly to Step 5 output. No more questions.
+2. Store Q2 selections as `TRIM_LIST` for Step 7.
+3. From Q3: skills the user **did NOT select** are added to `TRIM_LIST`. Skills the user **did select** are written as `"on"` using the same python3 snippet in step 1 above (extend the `confirmed` list).
+4. `AUTO_NAME_ONLY` bucket is always added to `TRIM_LIST` regardless of user interaction.
+5. If `TRIM_LIST` is empty (Q2 omitted or nothing selected, Q3 omitted or all kept, and AUTO_NAME_ONLY empty), skip Step 7.
+6. Proceed directly to Step 5 output. No more questions.
 
 ### Step 5: Output
 
@@ -268,7 +321,7 @@ Based on: [detected stack] in [current path] + "[user task]"
 |---|---|---|---|---|---|
 | 1 | `typescript-pro` | [installed] | on → local | TS/TSX files found | confirmed in Step 4b — written to settings.local.json |
 | 2 | `custom-tool` | [project-local] | user-only | Found in .claude/skills | `/custom-tool` |
-| 3 | `docker-development` | [not installed] | — | docker-compose.yml found | `npx skills add docker-development` (installs globally) |
+| 3 | `docker-development` | [not installed] | — | docker-compose.yml found | `npx skills add <owner/repo>` (from registry) |
 | 4 | `senior-backend` | [installed] | off | Strong backend signals | ⚠️ disabled — enable with `/skills` |
 ...
 
@@ -278,29 +331,32 @@ Based on: [detected stack] in [current path] + "[user task]"
 
 If the `ORPHAN` list from Step 2 is non-empty, append this section after the table:
 
-```
-## ⚠️ Stale skill entries detected
+---
+**⚠️ Stale skill entries detected**
 
 These skills have entries in settings but their directories no longer exist:
 - `some-deleted-skill` (in ~/.claude/settings.json)
 - `another-deleted-skill` (in .claude/settings.local.json)
 
 Run this to clean them up:
-  python3 -c "
-import json
-for path in ['$HOME/.claude/settings.json', '.claude/settings.local.json']:
+```bash
+python3 - <<'PYEOF'
+import json, os
+for path in [os.path.expanduser('~/.claude/settings.json'), '.claude/settings.local.json']:
     try:
         d = json.load(open(path))
         overrides = d.get('skillOverrides', {})
-        stale = [k for k in overrides if not __import__('os').path.isdir(f\"{path.rsplit('/',2)[0]}/skills/{k}\")]
-        [overrides.pop(k) for k in stale]
+        skills_root = os.path.join(os.path.dirname(path), 'skills')
+        stale = [k for k in list(overrides) if not os.path.isdir(os.path.join(skills_root, k))]
+        for k in stale:
+            del overrides[k]
         json.dump(d, open(path, 'w'), indent=2)
         print(f'Cleaned {len(stale)} stale entries from {path}: {stale}')
     except FileNotFoundError:
         pass
-  "
+PYEOF
 ```
-```
+---
 
 ## Add to CLAUDE.md?
 
@@ -329,17 +385,29 @@ If a choice is made — append the table to the selected `CLAUDE.md` file (or up
 
 ### Step 7: Apply scope trim
 
-This step runs **only if** the user selected skills to trim in Step 4b Q2. Do **not** ask again — the user already confirmed their selection.
+This step runs **only if** `TRIM_LIST` is non-empty. `TRIM_LIST` is populated from three sources:
+- **Q2 selections** — explicitly trimmed by the user
+- **Q3 non-selections** — borderline skills the user chose not to keep active
+- **AUTO_NAME_ONLY bucket** — score-0 skills with no existing project-level override (applied silently, no user confirmation needed)
 
-Show a brief summary of what will be written:
+Show a brief summary before writing, grouping by source:
 ```
 Setting name-only in .claude/settings.local.json:
-- wordpress-pro    (no PHP/WP files found)
-- playwright-pro   (no test config found)
-- senior-devops    (no Docker/k8s/CI files found)
+
+  Explicitly trimmed (Q2):
+  - wordpress-pro    (no PHP/WP files found)
+  - playwright-pro   (no test config found)
+
+  Borderline — not kept (Q3):
+  - senior-devops    (Dockerfile found but no k8s/CI signals)
+
+  Auto name-only (no project signals):
+  - php-pro
+  - nextjs-developer
+  - react-expert
 ```
 
-Then immediately apply the change using this exact shell snippet — **do not use any `claude` or `npx skills` CLI commands**, they do not support this operation:
+Then immediately apply the change — **do not use any `claude` or `npx skills` CLI commands**, they do not support this operation:
    ```bash
    python3 - <<'EOF'
    import json, os
@@ -350,22 +418,24 @@ Then immediately apply the change using this exact shell snippet — **do not us
    except (FileNotFoundError, json.JSONDecodeError):
        d = {}
    overrides = d.setdefault("skillOverrides", {})
-   to_trim = {
-       # populated at runtime from step above
-       # "wordpress-pro": "name-only",
-   }
-   for name, state in to_trim.items():
-       if name not in overrides:          # never overwrite existing entries
-           overrides[name] = state
+   to_trim = [
+       # populated at runtime — full TRIM_LIST from Q2 + Q3 non-selections + AUTO_NAME_ONLY
+       # "wordpress-pro",
+       # "playwright-pro",
+   ]
+   for name in to_trim:
+       if name not in overrides:          # never overwrite existing project entries
+           overrides[name] = "name-only"
    json.dump(d, open(path, "w"), indent=2)
-   print("Done.")
+   print(f"Set {len(to_trim)} skill(s) to name-only.")
    EOF
    ```
-   Substitute `to_trim` with the confirmed skill list before running.
+   Substitute `to_trim` with the full `TRIM_LIST` before running.
 
 **Safety rules — must all be respected:**
-- **Never touch** skills already present in `.claude/settings.local.json` — existing project overrides are authoritative.
-- **Only set `name-only`**, never `off` — skills remain discoverable by name.
-- **Skip** any skill whose global state is already `name-only`, `off`, or `user-only` — nothing to do.
-- **Always show the list** and wait for confirmation before writing — no silent modifications.
+- **Never touch** skills already present in `.claude/settings.local.json` — existing project overrides are authoritative. The python3 snippet's `if name not in overrides` guard enforces this.
+- **Only write `name-only`**, never `off` — skills must remain discoverable by name.
+- **AUTO_NAME_ONLY bucket already excludes** skills whose global state is `name-only`, `off`, or `user-only` (see bucket definition above) — the python3 guard is a secondary safety net, not the primary filter.
+- **AUTO_NAME_ONLY writes are silent** — do not prompt again; zero score is sufficient signal.
+- **Always show the grouped summary** before the python3 write runs — it serves as a receipt for all three trim sources.
 - **No invented CLI commands** — the only correct mechanism is reading/writing `.claude/settings.local.json` directly as shown above.

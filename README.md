@@ -1,8 +1,8 @@
 # skill-suggest
 
-A [Claude Code](https://claude.ai/code) skill that scans your project and suggests the most relevant skills — pulling from both your **locally installed** skill library and the **official online registry**.
+A [Claude Code](https://claude.ai/code) skill that scans your project and suggests the most relevant skills — pulling from both your **locally installed** skill library and online registries ([skills.sh](https://skills.sh/), [clawhub.ai](https://clawhub.ai/)).
 
-No more guessing which skills to activate. Point it at your project and it tells you exactly what to install or invoke.
+No more guessing which skills to activate. Point it at your project and it tells you exactly which ones to promote — and automatically demotes the rest to `name-only` to keep your context clean.
 
 ---
 
@@ -11,9 +11,37 @@ No more guessing which skills to activate. Point it at your project and it tells
 1. **Scans your project** — detects file types, frameworks, and path context (e.g., `/api` vs `/ui`)
 2. **Smart Orchestration** — uses an "Enough" heuristic to stop early if it finds clear matches, saving time and tokens
 3. **Reads your installed skills** — checks `~/.claude/skills/` and project-local `.claude/skills/`
-4. **Conditional Registry Fetch** — only hits the online registry if local results are sparse or if you use `online` mode
-5. **Labels results clearly** — `[installed]`, `[project-local]`, vs `[not installed]`
-6. **Directory-Scoped Activation** — offers to write `## Active Skills` to the root OR a local `CLAUDE.md` for folder-specific skill sets
+4. **Classifies every skill into a bucket** — then asks targeted questions before writing anything
+5. **Auto demotes unused skills** — score-0 skills are silently set to `name-only` in the project's `settings.local.json`
+6. **Conditional Registry Fetch** — only hits online registries if you use `online` mode
+7. **Labels results clearly** — `[installed]`, `[project-local]`, `[not installed]`
+8. **Directory-Scoped Activation** — offers to write `## Active Skills` to root or a local `CLAUDE.md` for folder-specific skill sets
+
+---
+
+## Recommended Setup
+
+**Install all skills you might ever use, then set them globally to `name-only`:**
+
+```json
+// ~/.claude/settings.json
+{
+  "skillOverrides": {
+    "python-pro": "name-only",
+    "typescript-pro": "name-only",
+    "wordpress-pro": "name-only",
+    "senior-backend": "name-only"
+    // ... all your skills
+  }
+}
+```
+
+Then run `/skill-suggest` at the start of each project. It will:
+- Promote the right skills to `"on"` in `.claude/settings.local.json`
+- Set irrelevant ones to `name-only` at the project level
+- Ask you about borderline cases
+
+This keeps your global context minimal while giving each project exactly the skills it needs.
 
 ---
 
@@ -26,13 +54,12 @@ npx skills add el-musleh/skill-suggest
 Or manually:
 
 ```bash
-mkdir -p ~/.agents/skills/skill-suggest
-curl -o ~/.agents/skills/skill-suggest/SKILL.md \
+mkdir -p ~/.claude/skills/skill-suggest
+curl -o ~/.claude/skills/skill-suggest/SKILL.md \
   https://raw.githubusercontent.com/el-musleh/skill-suggest/main/SKILL.md
-ln -s ~/.agents/skills/skill-suggest ~/.claude/skills/skill-suggest
 ```
 
-Then add to your `~/.claude/settings.json`:
+Then enable it in `~/.claude/settings.json`:
 
 ```json
 {
@@ -42,13 +69,19 @@ Then add to your `~/.claude/settings.json`:
 }
 ```
 
+## Update
+
+```bash
+npx skills update skill-suggest
+```
+
 ---
 
 ## Usage
 
 ```bash
 /skill-suggest           # Fast Mode: Scans project + local skills (instant)
-/skill-suggest online    # Online Mode: Also searches the official registry
+/skill-suggest online    # Online Mode: Also searches skills.sh and clawhub.ai
 /skill-suggest "task"    # Task Mode: Scans project + weights toward your task
 ```
 
@@ -64,6 +97,21 @@ Then add to your `~/.claude/settings.json`:
 
 ---
 
+## How Skills Are Classified
+
+Before asking any questions, every installed skill is sorted into one of four buckets:
+
+| Bucket | Criteria | What happens |
+|---|---|---|
+| **ACTIVATE_CANDIDATES** | Top 4 by score | Q1 — user picks which to set `on` |
+| **EXPLICIT_TRIM** | Below threshold, globally `on` | Q2 — user picks which to demote |
+| **BORDERLINE** | Non-zero score, not top 4 | Q3 — user picks which to keep; rest become `name-only` |
+| **AUTO_NAME_ONLY** | Score = 0, globally `on`, no project override | Silent — written to `settings.local.json` without prompting |
+
+Skills already at `name-only`, `off`, or `user-only` globally are never touched.
+
+---
+
 ## Example Output
 
 ```
@@ -72,16 +120,19 @@ Then add to your `~/.claude/settings.json`:
 Based on: WordPress (wp-config.php, functions.php), Playwright (playwright.config.js)
 + task: "add Stripe payments and write Playwright tests"
 
-| # | Skill            | Status          | Why                              | Action                              |
-|---|------------------|-----------------|----------------------------------|-------------------------------------|
-| 1 | wordpress-pro    | [installed]     | wp-config.php detected           | /wordpress-pro                      |
-| 2 | playwright-pro   | [installed]     | playwright.config.js found       | /playwright-pro                     |
-| 3 | stripe-integration-expert | [not installed] | task mentions Stripe    | npx skills add stripe-integration-expert |
-| 4 | security-reviewer| [installed]     | payment integration = auth risk  | /security-reviewer                  |
-| 5 | php-pro          | [installed]     | WordPress backend                | /php-pro                            |
-| 6 | tdd-guide        | [not installed] | task mentions "tests"            | npx skills add tdd-guide            |
+| # | Skill            | Status      | State        | Why                             | Action                          |
+|---|------------------|-------------|--------------|---------------------------------|---------------------------------|
+| 1 | wordpress-pro    | [installed] | on → local   | wp-config.php detected          | confirmed — written to local    |
+| 2 | playwright-pro   | [installed] | on → local   | playwright.config.js found      | confirmed — written to local    |
+| 3 | security-reviewer| [installed] | on → local   | payment integration = auth risk | confirmed — written to local    |
+| 4 | php-pro          | [installed] | name-only    | WordPress backend               | promoted by user in Q3          |
 
-Want me to add these to your CLAUDE.md as an ## Active Skills table? (yes/no)
+Setting name-only in .claude/settings.local.json:
+
+  Auto name-only (no project signals):
+  - nextjs-developer
+  - react-expert
+  - terraform-engineer
 ```
 
 ---
@@ -90,19 +141,7 @@ Want me to add these to your CLAUDE.md as an ## Active Skills table? (yes/no)
 
 This skill can write a persistent skill table into your project's `CLAUDE.md`. Claude reads `CLAUDE.md` automatically on every session start.
 
-**New:** You can now save these to a subdirectory `CLAUDE.md` (e.g., `src/api/CLAUDE.md`). This ensures that specific skills (like `sql-pro`) only activate when you are working in that specific part of the codebase.
-
----
-
-## Update
-
-To get the latest improvements (Smart Orchestration, directory-scoped activation, etc.), run:
-
-```bash
-npx skills update skill-suggest
-```
-
-If you installed manually via `curl`, simply re-run the `curl` command from the [Install](#install) section.
+You can save these to a subdirectory `CLAUDE.md` (e.g., `src/api/CLAUDE.md`). This ensures that specific skills (like `sql-pro`) only activate when you are working in that part of the codebase.
 
 ---
 
@@ -112,6 +151,7 @@ If you installed manually via `curl`, simply re-run the `curl` command from the 
 |---|---|
 | path contains `api`/`server` | `senior-backend`, `sql-pro`, `api-designer` |
 | path contains `ui`/`frontend` | `senior-frontend`, `react-expert`, `vue-expert` |
+| path contains `test`/`spec` | `playwright-pro`, `senior-qa`, `tdd-guide` |
 | `package.json` has `stripe` | `stripe-integration-expert` |
 | `package.json` has `tailwind` | `ui-design-system` |
 | `wp-config.php` / `functions.php` | `wordpress-pro`, `php-pro`, `security-reviewer` |
@@ -135,6 +175,7 @@ If you installed manually via `curl`, simply re-run the `curl` command from the 
 
 - [Claude Code](https://claude.ai/code) CLI installed
 - Skills system enabled (comes with Claude Code by default)
+- `python3` or `jq` available (for reading skill states — both are standard on Linux/macOS)
 
 ---
 
