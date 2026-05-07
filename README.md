@@ -8,14 +8,15 @@ No more guessing which skills to activate. Point it at your project and it tells
 
 ## What It Does
 
-1. **Scans your project** — detects file types, frameworks, and path context (e.g., `/api` vs `/ui`)
-2. **Smart Orchestration** — uses an "Enough" heuristic to stop early if it finds clear matches, saving time and tokens
-3. **Reads your installed skills** — checks `~/.claude/skills/` and project-local `.claude/skills/`
-4. **Classifies every skill into a bucket** — then asks targeted questions before writing anything
-5. **Auto demotes unused skills** — score-0 skills are silently set to `name-only` in the project's `settings.local.json`
-6. **Conditional Registry Fetch** — only hits online registries if you use `online` mode
-7. **Labels results clearly** — `[installed]`, `[project-local]`, `[not installed]`
-8. **Directory-Scoped Activation** — offers to write `## Active Skills` to root or a local `CLAUDE.md` for folder-specific skill sets
+1. **Triggers Project Initialization** — automatically runs `/init` if the `.claude/` folder is missing to ensure a consistent project base.
+2. **Prioritizes Online Discovery** — always offers to search online registries (skills.sh, clawhub.ai) for the latest tools.
+3. **Local-First Installation** — installs new skills directly into `.claude/skills/` for maximum portability (or references global ones to avoid duplication).
+4. **Portability & Collaboration** — records all active skills in `settings.local.json`, making it easy for contributors to sync missing skills.
+5. **Scans your project** — detects file types, frameworks, and path context.
+6. **Smart Orchestration** — uses an "Enough" heuristic to stop early if it finds clear matches, saving time and tokens.
+7. **Reads your installed skills** — checks `~/.claude/skills/` and project-local `.claude/skills/`.
+8. **Classifies every skill into a bucket** — then asks targeted questions before writing anything.
+9. **Auto demotes unused skills** — score-0 skills are silently set to `name-only` in the project's `settings.local.json`.
 
 ---
 

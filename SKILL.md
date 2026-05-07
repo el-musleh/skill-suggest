@@ -20,7 +20,7 @@ Analyzes the current directory and your task description, then recommends skills
 ## ⚠️ Critical Rules — Read Before Anything Else
 
 1. **The skills CLI is `npx skills`.** The correct install command is `npx skills add <owner/repo>` (e.g. `npx skills add vercel-labs/agent-skills`). Commands that do NOT exist: `claude skills install`, `npx skills install`, `gemini skills`. Never invent subcommands — use only: `add`, `remove`, `list`, `find`, `update`, `init`.
-2. **"Local" means `.claude/settings.local.json`**, not copying files. Never copy skill directories.
+2. **"Local" installation means downloading SKILL.md into `.claude/skills/<name>/SKILL.md`** and ensuring an entry exists in `.claude/settings.local.json`. This enables project-level portability. If a skill is already available globally, do not duplicate it; just reference it in the local settings file.
 3. **Step 4b is mandatory.** Always call `AskUserQuestion` with the exact questions defined in Step 4b before showing output. Never substitute your own questions.
 4. **Q0 covers the online check and install scope together** — never add a separate question for install location. The only install paths are `npx skills add` (global) or writing SKILL.md to `.claude/skills/` (local), triggered from Q0.
 
@@ -32,8 +32,8 @@ To optimize for speed and cost, the agent must follow this "Smart Flow" logic:
 
 ### 1. The "Enough" Heuristic
 Before each step, ask: *"Do I already have 3+ high-confidence suggestions?"*
-- **If Yes:** Skip further discovery (Step 3) and proceed directly to **Step 4b** (interactive review). Never skip Step 4b — it is mandatory.
-- **If No:** Proceed to the next discovery step.
+- **If Yes:** You may skip further *local* scanning, but **always** prioritize offering the online registry check in Step 4b Q0. Proceed to **Step 4b** (interactive review) once confident or after the online check. Never skip Step 4b — it is mandatory.
+- **If No:** Proceed to the next discovery step, prioritizing online fetch and discovery.
 
 ### 2. Complexity Budget
 - **Tool Call Limit:** Maximum 3 discovery-related tool calls total.
@@ -170,7 +170,7 @@ Use `WebFetch` to retrieve results from these URLs. Extract skill names and desc
 
 ### Step 4: Score and suggest
 
-Before scoring, collect any `ORPHAN` lines from Step 2 into a separate list. **Exclude orphans from scoring entirely** — a deleted skill cannot be suggested or trimmed.
+Before scoring, collect any `ORPHAN` lines from Step 2 into a separate list. **Do not exclude orphans from the project settings** — if a skill is present in `.claude/settings.local.json` but missing from the disk, it must be surfaced in the table as `[missing]` or `[not installed]` to ensure contributors can easily install required project skills.
 
 Then merge the `SKILL_STATE` and `SKILL_STATE_LOCAL` lines into a state map (local overrides global). Apply these rules:
 
@@ -208,29 +208,29 @@ Score skills from all sources against the project fingerprint and **current dire
 - **AUTO_NAME_ONLY** — all remaining installed skills with score = 0 that are currently globally `on` and have no entry in `.claude/settings.local.json`; these are applied silently in Step 7 without asking. Skills already globally `name-only`, `off`, or `user-only` are excluded — nothing to change.
 
 **Before calling AskUserQuestion, check: does `.claude/` exist in the project root?**
-- If **no**: create it automatically with `mkdir -p .claude` — do NOT ask the user to run `/init` first.
+- If **no**: Trigger the `/init` skill to initialize the project and ensure foundational configurations like `settings.local.json` are established. Do not proceed until initialization is complete.
 
 **Call `AskUserQuestion` now. Do not output text first. Use this exact call structure. Maximum 4 questions — never add a 5th:**
 
 ```
 questions: [
-  // Question 0 is ALWAYS shown — it asks about online check and, if yes, install scope in one shot.
+  // Question 0 is ALWAYS shown — it asks about online check and prioritizes local project installation.
   {
     header: "Online check",
     question: "Do you want to search online registries (skills.sh, clawhub.ai) for additional skills?",
     multiSelect: false,
     options: [
       {
-        label: "Yes — install globally",
-        description: "Fetch online registries, then install any picks with npx skills add (available in all projects)"
+        label: "Yes — install to .claude/skills/",
+        description: "Fetch online registries and download picks into this project's .claude/skills/ (unless already available globally)"
       },
       {
-        label: "Yes — install locally",
-        description: "Fetch online registries, then download SKILL.md into .claude/skills/ (this project only)"
+        label: "Yes — install globally",
+        description: "Fetch online registries and install any picks with npx skills add (available in all projects)"
       },
       {
         label: "No thanks",
-        description: "Skip online check and work from locally installed skills only"
+        description: "Skip online check and work from existing skills only"
       }
     ]
   },
@@ -278,8 +278,12 @@ questions: [
 **After the user submits:**
 
 0. Based on Q0 response, set state before continuing:
-   - **"Yes — install globally"**: set `ONLINE_MODE=true`, `INSTALL_SCOPE=global`. Run Step 3 now, then for each skill the user picks from the online results: run `npx skills add <owner/repo>`. Re-read installed skills so newly installed ones appear in Q1.
-   - **"Yes — install locally"**: set `ONLINE_MODE=true`, `INSTALL_SCOPE=local`. Run Step 3 now, then for each pick: use `WebFetch` to download the raw SKILL.md and write it to `.claude/skills/<name>/SKILL.md`. Re-read installed skills.
+   - **"Yes — install to .claude/skills/"**: set `ONLINE_MODE=true`, `INSTALL_SCOPE=project`. Run Step 3 now. For each pick:
+     - Check if skill is already installed globally (`~/.claude/skills/`).
+     - If **Yes**: Just mention it in `.claude/settings.local.json` as `"on"` (do not install locally).
+     - If **No**: Use `WebFetch` to download the raw SKILL.md and write it to `.claude/skills/<name>/SKILL.md`.
+     - Re-read installed skills.
+   - **"Yes — install globally"**: set `ONLINE_MODE=true`, `INSTALL_SCOPE=global`. Run Step 3 now. For each pick: run `npx skills add <owner/repo>`. Re-read installed skills.
    - **"No thanks"**: set `ONLINE_MODE=false`. Skip Step 3 entirely and proceed.
 
 1. Write Q1 selections to `.claude/settings.local.json` as `"on"`:
@@ -323,7 +327,7 @@ Based on: [detected stack] in [current path] + "[user task]"
 |---|---|---|---|---|---|
 | 1 | `typescript-pro` | [installed] | on → local | TS/TSX files found | confirmed in Step 4b — written to settings.local.json |
 | 2 | `custom-tool` | [project-local] | user-only | Found in .claude/skills | `/custom-tool` |
-| 3 | `docker-development` | [not installed] | — | docker-compose.yml found | `npx skills add <owner/repo>` (from registry) |
+| 3 | `docker-development` | [not installed] | — | docker-compose.yml found | `npx skills add <owner/repo>` or local install |
 | 4 | `senior-backend` | [installed] | off | Strong backend signals | ⚠️ disabled — enable with `/skills` |
 ...
 
