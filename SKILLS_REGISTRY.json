@@ -1,0 +1,4115 @@
+[
+  {
+    "name": "a11y-audit",
+    "description": "Accessibility audit skill for scanning, fixing, and verifying WCAG 2.2 Level A and AA compliance across React, Next.js, Vue, Angular, Svelte, and plain HTML codebases. Use when auditing accessibility, fixing a11y violations, checking color contrast, generating compliance reports, or integrating accessibility checks into CI/CD pipelines.",
+    "source": "a11y-audit",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ab-test-setup",
+    "description": "When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions \"A/B test,\" \"split test,\" \"experiment,\" \"test this change,\" \"variant copy,\" \"multivariate test,\" \"hypothesis,\" \"conversion experiment,\" \"statistical significance,\" or \"test this.\" For tracking implementation, see analytics-tracking.",
+    "source": "ab-test-setup",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ad-creative",
+    "description": "When the user needs to generate, iterate, or scale ad creative for paid advertising. Use when they say 'write ad copy,' 'generate headlines,' 'create ad variations,' 'bulk creative,' 'iterate on ads,' 'ad copy validation,' 'RSA headlines,' 'Meta ad copy,' 'LinkedIn ad,' or 'creative testing.' This is pure creative production \u2014 distinct from paid-ads (campaign strategy). Use ad-creative when you need the copy, not the campaign plan.",
+    "source": "ad-creative",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "adversarial-reviewer",
+    "description": "Adversarial code review that breaks the self-review monoculture. Use when you want a genuinely critical review of recent changes, before merging a PR, or when you suspect Claude is being too agreeable about code quality. Forces perspective shifts through hostile reviewer personas that catch blind spots the author's mental model shares with the reviewer.",
+    "source": "adversarial-reviewer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "agent-designer",
+    "description": "Use when the user asks to design multi-agent systems, create agent architectures, define agent communication patterns, or build autonomous agent workflows.",
+    "source": "agent-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "agent-protocol",
+    "description": "Inter-agent communication protocol for C-suite agent teams. Defines invocation syntax, loop prevention, isolation rules, and response formats. Use when C-suite agents need to query each other, coordinate cross-functional analysis, or run board meetings with multiple agent roles.",
+    "source": "agent-protocol",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "agent-workflow-designer",
+    "description": "Agent Workflow Designer",
+    "source": "agent-workflow-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "agenthub",
+    "description": "Multi-agent collaboration plugin that spawns N parallel subagents competing on the same task via git worktree isolation. Agents work independently, results are evaluated by metric or LLM judge, and the best branch is merged. Use when: user wants multiple approaches tried in parallel \u2014 code optimization, content variation, research exploration, or any task that benefits from parallel competition. Requires: a git repo.",
+    "source": "agenthub",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "agile-product-owner",
+    "description": "Agile product ownership for backlog management and sprint execution. Covers user story writing, acceptance criteria, sprint planning, and velocity tracking. Use for writing user stories, creating acceptance criteria, planning sprints, estimating story points, breaking down epics, or prioritizing backlog.",
+    "source": "agile-product-owner",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ai-security",
+    "description": "Use when assessing AI/ML systems for prompt injection, jailbreak vulnerabilities, model inversion risk, data poisoning exposure, or agent tool abuse. Covers MITRE ATLAS technique mapping, injection signature detection, and adversarial robustness scoring.",
+    "source": "ai-security",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ai-seo",
+    "description": "Optimize content to get cited by AI search engines \u2014 ChatGPT, Perplexity, Google AI Overviews, Claude, Gemini, Copilot. Use when you want your content to appear in AI-generated answers, not just ranked in blue links. Triggers: 'optimize for AI search', 'get cited by ChatGPT', 'AI Overviews', 'Perplexity citations', 'AI SEO', 'generative search', 'LLM visibility', 'GEO' (generative engine optimization). NOT for traditional SEO ranking (use seo-audit). NOT for content creation (use content-production).",
+    "source": "ai-seo",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "analytics-tracking",
+    "description": "Set up, audit, and debug analytics tracking implementation \u2014 GA4, Google Tag Manager, event taxonomy, conversion tracking, and data quality. Use when building a tracking plan from scratch, auditing existing analytics for gaps or errors, debugging missing events, or setting up GTM. Trigger keywords: GA4 setup, Google Tag Manager, GTM, event tracking, analytics implementation, conversion tracking, tracking plan, event taxonomy, custom dimensions, UTM tracking, analytics audit, missing events, tracking broken. NOT for analyzing marketing campaign data \u2014 use campaign-analytics for that. NOT for BI dashboards \u2014 use product-analytics for in-product event analysis.",
+    "source": "analytics-tracking",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "angular-architect",
+    "description": "Generates Angular 17+ standalone components, configures advanced routing with lazy loading and guards, implements NgRx state management, applies RxJS patterns, and optimizes bundle performance. Use when building Angular 17+ applications with standalone components or signals, setting up NgRx stores, establishing RxJS reactive patterns, performance tuning, or writing Angular tests for enterprise apps.",
+    "source": "angular-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "api-design-reviewer",
+    "description": "API Design Reviewer",
+    "source": "api-design-reviewer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "api-designer",
+    "description": "Use when designing REST or GraphQL APIs, creating OpenAPI specifications, or planning API architecture. Invoke for resource modeling, versioning strategies, pagination patterns, error handling standards.",
+    "source": "api-designer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "api-test-suite-builder",
+    "description": "Use when the user asks to generate API tests, create integration test suites, test REST endpoints, or build contract tests.",
+    "source": "api-test-suite-builder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "app-store-optimization",
+    "description": "App Store Optimization (ASO) toolkit for researching keywords, analyzing competitor rankings, generating metadata suggestions, and improving app visibility on Apple App Store and Google Play Store. Use when the user asks about ASO, app store rankings, app metadata, app titles and descriptions, app store listings, app visibility, or mobile app marketing on iOS or Android. Supports keyword research and scoring, competitor keyword analysis, metadata optimization, A/B test planning, launch checklists, and tracking ranking changes.",
+    "source": "app-store-optimization",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "apple-hig-expert",
+    "description": "Expert guidance on Apple Human Interface Guidelines (HIG). Covers iOS, macOS, and visionOS with 2026 Liquid Glass aesthetics and accessibility-first design.",
+    "source": "apple-hig-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "architecture-designer",
+    "description": "Use when designing new high-level system architecture, reviewing existing designs, or making architectural decisions. Invoke to create architecture diagrams, write Architecture Decision Records (ADRs), evaluate technology trade-offs, design component interactions, and plan for scalability. Use for system design, architecture review, microservices structuring, ADR authoring, scalability planning, and infrastructure pattern selection \u2014 distinct from code-level design patterns or database-only design tasks.",
+    "source": "architecture-designer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "atlassian-admin",
+    "description": "Atlassian Administrator for managing and organizing Atlassian products (Jira, Confluence, Bitbucket, Trello), users, permissions, security, integrations, system configuration, and org-wide governance. Use when asked to add users to Jira, change Confluence permissions, configure access control, update admin settings, manage Atlassian groups, set up SSO, install marketplace apps, review security policies, or handle any org-wide Atlassian administration task.",
+    "source": "atlassian-admin",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "atlassian-mcp",
+    "description": "Integrates with Atlassian products to manage project tracking and documentation via MCP protocol. Use when querying Jira issues with JQL filters, creating and updating tickets with custom fields, searching or editing Confluence pages with CQL, managing sprints and backlogs, setting up MCP server authentication, syncing documentation, or debugging Atlassian API integrations.",
+    "source": "atlassian-mcp",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "atlassian-templates",
+    "description": "Atlassian Template and Files Creator/Modifier expert for creating, modifying, and managing Jira and Confluence templates, blueprints, custom layouts, reusable components, and standardized content structures. Use when building org-wide templates, custom blueprints, page layouts, and automated content generation.",
+    "source": "atlassian-templates",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "autoresearch-agent",
+    "description": "Autonomous experiment loop that optimizes any file by a measurable metric. Inspired by Karpathy's autoresearch. The agent edits a target file, runs a fixed evaluation, keeps improvements (git commit), discards failures (git reset), and loops indefinitely. Use when: user wants to optimize code speed, reduce bundle/image size, improve test pass rate, optimize prompts, improve content quality (headlines, copy, CTR), or run any measurable improvement loop. Requires: a target file, an evaluation command that outputs a metric, and a git repo.",
+    "source": "autoresearch-agent",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "aws-solution-architect",
+    "description": "Design AWS architectures for startups using serverless patterns and IaC templates. Use when asked to design serverless architecture, create CloudFormation templates, optimize AWS costs, set up CI/CD pipelines, or migrate to AWS. Covers Lambda, API Gateway, DynamoDB, ECS, Aurora, and cost optimization.",
+    "source": "aws-solution-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "azure-cloud-architect",
+    "description": "Design Azure architectures for startups and enterprises. Use when asked to design Azure infrastructure, create Bicep/ARM templates, optimize Azure costs, set up Azure DevOps pipelines, or migrate to Azure. Covers AKS, App Service, Azure Functions, Cosmos DB, and cost optimization.",
+    "source": "azure-cloud-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "board",
+    "description": "Read, write, and browse the AgentHub message board for agent coordination.",
+    "source": "board",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "board-deck-builder",
+    "description": "Assembles comprehensive board and investor update decks by pulling perspectives from all C-suite roles. Use when preparing board meetings, investor updates, quarterly business reviews, or fundraising narratives. Covers structure, narrative framework, bad news delivery, and common mistakes.",
+    "source": "board-deck-builder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "board-meeting",
+    "description": "Multi-agent board meeting protocol for strategic decisions. Runs a structured 6-phase deliberation: context loading, independent C-suite contributions (isolated, no cross-pollination), critic analysis, synthesis, founder review, and decision extraction. Use when the user invokes /cs:board, calls a board meeting, or wants structured multi-perspective executive deliberation on a strategic question.",
+    "source": "board-meeting",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "board-prep",
+    "description": "/em -board-prep \u2014 Board Meeting Preparation",
+    "source": "board-prep",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "brand-guidelines",
+    "description": "When the user wants to apply, document, or enforce brand guidelines for any product or company. Also use when the user mentions 'brand guidelines,' 'brand colors,' 'typography,' 'logo usage,' 'brand voice,' 'visual identity,' 'tone of voice,' 'brand standards,' 'style guide,' 'brand consistency,' or 'company design standards.' Covers color systems, typography, logo rules, imagery guidelines, and tone matrix for any brand \u2014 including Anthropic's official identity.",
+    "source": "brand-guidelines",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "browser-automation",
+    "description": "Use when the user asks to automate browser tasks, scrape websites, fill forms, capture screenshots, extract structured data from web pages, or build web automation workflows. NOT for testing \u2014 use playwright-pro for that.",
+    "source": "browser-automation",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "browserstack",
+    "description": ">-",
+    "source": "browserstack",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "business-growth-skills",
+    "description": "4 business growth agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Customer success (health scoring, churn), sales engineer (RFP), revenue operations (pipeline, GTM), contract & proposal writer. Python tools (stdlib-only).",
+    "source": "business-growth-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "c-level-advisor",
+    "description": "10 C-level advisory agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. CEO, CTO, COO, CPO, CMO, CFO, CRO, CISO, CHRO, Executive Mentor. Multi-role board meetings, strategy routing, structured recommendations. For founders needing executive-level decision support.",
+    "source": "c-level-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "campaign-analytics",
+    "description": "Analyzes campaign performance with multi-touch attribution, funnel conversion analysis, and ROI calculation for marketing optimization. Use when analyzing marketing campaigns, ad performance, attribution models, conversion rates, or calculating marketing ROI, ROAS, CPA, and campaign metrics across channels.",
+    "source": "campaign-analytics",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "capa-officer",
+    "description": "CAPA system management for medical device QMS. Covers root cause analysis, corrective action planning, effectiveness verification, and CAPA metrics. Use for CAPA investigations, 5-Why analysis, fishbone diagrams, root cause determination, corrective action tracking, effectiveness verification, or CAPA program optimization.",
+    "source": "capa-officer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ceo-advisor",
+    "description": "Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management. Use when planning strategy, preparing board presentations, managing investors, developing organizational culture, making executive decisions, fundraising, or when user mentions CEO, strategic planning, board meetings, investor updates, organizational leadership, or executive strategy.",
+    "source": "ceo-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cfo-advisor",
+    "description": "Financial leadership for startups and scaling companies. Financial modeling, unit economics, fundraising strategy, cash management, and board financial packages. Use when building financial models, analyzing unit economics, planning fundraising, managing cash runway, preparing board materials, or when user mentions CFO, burn rate, runway, fundraising, unit economics, LTV, CAC, term sheets, or financial strategy.",
+    "source": "cfo-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "challenge",
+    "description": "/em -challenge \u2014 Pre-Mortem Plan Analysis",
+    "source": "challenge",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "change-management",
+    "description": "Framework for rolling out organizational changes without chaos. Covers the ADKAR model adapted for startups, communication templates, resistance patterns, and change fatigue management. Handles process changes, org restructures, strategy pivots, and culture changes. Use when announcing a reorg, switching tools, pivoting strategy, killing a product, changing leadership, or when user mentions change management, change rollout, managing resistance, org change, reorg, or pivot communication.",
+    "source": "change-management",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "changelog-generator",
+    "description": "Changelog Generator",
+    "source": "changelog-generator",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "chaos-engineer",
+    "description": "Designs chaos experiments, creates failure injection frameworks, and facilitates game day exercises for distributed systems \u2014 producing runbooks, experiment manifests, rollback procedures, and post-mortem templates. Use when designing chaos experiments, implementing failure injection frameworks, or conducting game day exercises. Invoke for chaos experiments, resilience testing, blast radius control, game days, antifragile systems, fault injection, Chaos Monkey, Litmus Chaos.",
+    "source": "chaos-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "chief-of-staff",
+    "description": "C-suite orchestration layer. Routes founder questions to the right advisor role(s), triggers multi-role board meetings for complex decisions, synthesizes outputs, and tracks decisions. Every C-suite interaction starts here. Loads company context automatically.",
+    "source": "chief-of-staff",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "chro-advisor",
+    "description": "People leadership for scaling companies. Hiring strategy, compensation design, org structure, culture, and retention. Use when building hiring plans, designing comp frameworks, restructuring teams, managing performance, building culture, or when user mentions CHRO, HR, people strategy, talent, headcount, compensation, org design, retention, or performance management.",
+    "source": "chro-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "churn-prevention",
+    "description": "Reduce voluntary and involuntary churn through cancel flow design, save offers, exit surveys, and dunning sequences. Use when designing or optimizing a cancel flow, building save offers, setting up dunning emails, or reducing failed-payment churn. Trigger keywords: cancel flow, churn reduction, save offers, dunning, exit survey, payment recovery, win-back, involuntary churn, failed payments, cancel page. NOT for customer health scoring or expansion revenue \u2014 use customer-success-manager for that.",
+    "source": "churn-prevention",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ci-cd-pipeline-builder",
+    "description": "CI/CD Pipeline Builder",
+    "source": "ci-cd-pipeline-builder",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ciso-advisor",
+    "description": "Security leadership for growth-stage companies. Risk quantification in dollars, compliance roadmap (SOC 2/ISO 27001/HIPAA/GDPR), security architecture strategy, incident response leadership, and board-level security reporting. Use when building security programs, justifying security budget, selecting compliance frameworks, managing incidents, assessing vendor risk, or when user mentions CISO, security strategy, compliance roadmap, zero trust, or board security reporting.",
+    "source": "ciso-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cli-developer",
+    "description": "Use when building CLI tools, implementing argument parsing, or adding interactive prompts. Invoke for parsing flags and subcommands, displaying progress bars and spinners, generating bash/zsh/fish completion scripts, CLI design, shell completions, and cross-platform terminal applications using commander, click, typer, or cobra.",
+    "source": "cli-developer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cloud-architect",
+    "description": "Designs cloud architectures, creates migration plans, generates cost optimization recommendations, and produces disaster recovery strategies across AWS, Azure, and GCP. Use when designing cloud architectures, planning migrations, or optimizing multi-cloud deployments. Invoke for Well-Architected Framework, cost optimization, disaster recovery, landing zones, security architecture, serverless design.",
+    "source": "cloud-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cloud-security",
+    "description": "Use when assessing cloud infrastructure for security misconfigurations, IAM privilege escalation paths, S3 public exposure, open security group rules, or IaC security gaps. Covers AWS, Azure, and GCP posture assessment with MITRE ATT&CK mapping.",
+    "source": "cloud-security",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cmo-advisor",
+    "description": "Marketing leadership for scaling companies. Brand positioning, growth model design, marketing budget allocation, and marketing org design. Use when designing brand strategy, selecting growth models (PLG vs sales-led vs community-led), allocating marketing budgets, building marketing teams, or when user mentions CMO, brand strategy, growth model, CAC, LTV, channel mix, or marketing ROI.",
+    "source": "cmo-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "code-documenter",
+    "description": "Generates, formats, and validates technical documentation \u2014 including docstrings, OpenAPI/Swagger specs, JSDoc annotations, doc portals, and user guides. Use when adding docstrings to functions or classes, creating API documentation, building documentation sites, or writing tutorials and user guides. Invoke for OpenAPI/Swagger specs, JSDoc, doc portals, getting started guides.",
+    "source": "code-documenter",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "code-reviewer",
+    "description": "Analyzes code diffs and files to identify bugs, security vulnerabilities (SQL injection, XSS, insecure deserialization), code smells, N+1 queries, naming issues, and architectural concerns, then produces a structured review report with prioritized, actionable feedback. Use when reviewing pull requests, conducting code quality audits, identifying refactoring opportunities, or checking for security issues. Invoke for PR reviews, code quality checks, refactoring suggestions, review code, code quality. Complements specialized skills (security-reviewer, test-master) by providing broad-scope review across correctness, performance, maintainability, and test coverage in a single pass.",
+    "source": "code-reviewer",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "code-to-prd",
+    "description": "|",
+    "source": "code-to-prd",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "code-tour",
+    "description": "Use when the user asks to create a CodeTour .tour file \u2014 persona-targeted, step-by-step walkthroughs that link to real files and line numbers. Trigger for: create a tour, onboarding tour, architecture tour, PR review tour, explain how X works, vibe check, RCA tour, contributor guide, or any structured code walkthrough request.",
+    "source": "code-tour",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "codebase-onboarding",
+    "description": "Codebase Onboarding",
+    "source": "codebase-onboarding",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cold-email",
+    "description": "When the user wants to write, improve, or build a sequence of B2B cold outreach emails to prospects who haven't asked to hear from them. Use when the user mentions 'cold email,' 'cold outreach,' 'prospecting emails,' 'SDR emails,' 'sales emails,' 'first touch email,' 'follow-up sequence,' or 'email prospecting.' Also use when they share an email draft that sounds too sales-y and needs to be humanized. Distinct from email-sequence (lifecycle/nurture to opted-in subscribers) \u2014 this is unsolicited outreach to new prospects. NOT for lifecycle emails, newsletters, or drip campaigns (use email-sequence).",
+    "source": "cold-email",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "command-guide",
+    "description": ">",
+    "source": "command-guide",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "company-os",
+    "description": "The meta-framework for how a company runs \u2014 the connective tissue between all C-suite roles. Covers operating system selection (EOS, Scaling Up, OKR-native, hybrid), accountability charts, scorecards, meeting pulse, issue resolution, and 90-day rocks. Use when setting up company operations, selecting a management framework, designing meeting rhythms, building accountability systems, implementing OKRs, or when user mentions EOS, Scaling Up, operating system, L10 meetings, rocks, scorecard, accountability chart, or quarterly planning.",
+    "source": "company-os",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "competitive-intel",
+    "description": "Systematic competitor tracking that feeds CMO positioning, CRO battlecards, and CPO roadmap decisions. Use when analyzing competitors, building sales battlecards, tracking market moves, positioning against alternatives, or when user mentions competitive intelligence, competitive analysis, competitor research, battlecards, win/loss, or market positioning.",
+    "source": "competitive-intel",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "competitive-teardown",
+    "description": "Analyzes competitor products and companies by synthesizing data from pricing pages, app store reviews, job postings, SEO signals, and social media into structured competitive intelligence. Produces feature comparison matrices scored across 12 dimensions, SWOT analyses, positioning maps, UX audits, pricing model breakdowns, action item roadmaps, and stakeholder presentation templates. Use when conducting competitor analysis, comparing products against competitors, researching the competitive landscape, building battle cards for sales, preparing for a product strategy or roadmap session, responding to a competitor's new feature or pricing change, or performing a quarterly competitive review.",
+    "source": "competitive-teardown",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "competitor-alternatives",
+    "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'switch from competitor,' or 'comparison content.' Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. Emphasizes deep research, modular content architecture, and varied section types beyond feature tables.",
+    "source": "competitor-alternatives",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "confluence-expert",
+    "description": "Atlassian Confluence expert for creating and managing spaces, knowledge bases, and documentation. Configures space permissions and hierarchies, creates page templates with macros, sets up documentation taxonomies, designs page layouts, and manages content governance. Use when users need to build or restructure a Confluence space, design page hierarchies with permission structures, author or standardise documentation templates, embed Jira reports in pages, run knowledge base audits, or establish documentation standards and collaborative workflows.",
+    "source": "confluence-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "content-creator",
+    "description": "Deprecated redirect skill that routes legacy 'content creator' requests to the correct specialist. Use when a user invokes 'content creator', asks to write a blog post, article, guide, or brand voice analysis (routes to content-production), or asks to plan content, build a topic cluster, or create a content calendar (routes to content-strategy). Does not handle requests directly \u2014 identifies user intent and redirects to content-production for writing/SEO/brand-voice tasks or content-strategy for planning tasks.",
+    "source": "content-creator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "content-humanizer",
+    "description": "Makes AI-generated content sound genuinely human \u2014 not just cleaned up, but alive. Use when content feels robotic, uses too many AI clich\u00e9s, lacks personality, or reads like it was written by committee. Triggers: 'this sounds like AI', 'make it more human', 'add personality', 'it feels generic', 'sounds robotic', 'fix AI writing', 'inject our voice'. NOT for initial content creation (use content-production). NOT for SEO optimization (use content-production Mode 3).",
+    "source": "content-humanizer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "content-production",
+    "description": "Full content production pipeline \u2014 takes a topic from blank page to published-ready piece. Use when you need to execute content: write a blog post, article, or guide end-to-end. Triggers: 'write a post about', 'draft an article', 'create content for', 'help me write', 'I need a blog post'. NOT for content strategy or calendar planning (use content-strategy). NOT for repurposing existing content (use content-repurposing). NOT for social captions only.",
+    "source": "content-production",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "content-strategy",
+    "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \\\"content strategy,\\\" \\\"what should I write about,\\\" \\\"content ideas,\\\" \\\"blog strategy,\\\" \\\"topic clusters,\\\" or \\\"content planning.\\\" For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit.",
+    "source": "content-strategy",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "context-engine",
+    "description": "Loads and manages company context for all C-suite advisor skills. Reads ~/.claude/company-context.md, detects stale context (>90 days), enriches context during conversations, and enforces privacy/anonymization rules before external API calls.",
+    "source": "context-engine",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "contract-and-proposal-writer",
+    "description": "Contract & Proposal Writer",
+    "source": "contract-and-proposal-writer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "coo-advisor",
+    "description": "Operations leadership for scaling companies. Process design, OKR execution, operational cadence, and scaling playbooks. Use when designing operations, setting up OKRs, building processes, scaling teams, analyzing bottlenecks, planning operational cadence, or when user mentions COO, operations, process improvement, OKRs, scaling, operational efficiency, or execution.",
+    "source": "coo-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "copy-editing",
+    "description": "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' or 'copy sweep.' This skill provides a systematic approach to editing marketing copy through multiple focused passes.",
+    "source": "copy-editing",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "copywriting",
+    "description": "When the user wants to write, rewrite, or improve marketing copy for any page \u2014 including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \\\"write copy for,\\\" \\\"improve this copy,\\\" \\\"rewrite this page,\\\" \\\"marketing copy,\\\" \\\"headline help,\\\" or \\\"CTA copy.\\\" For email copy, see email-sequence. For popup copy, see popup-cro.",
+    "source": "copywriting",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "coverage",
+    "description": ">-",
+    "source": "coverage",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cpo-advisor",
+    "description": "Product leadership for scaling companies. Product vision, portfolio strategy, product-market fit, and product org design. Use when setting product vision, managing a product portfolio, measuring PMF, designing product teams, prioritizing at the portfolio level, reporting to the board on product, or when user mentions CPO, product strategy, product-market fit, product organization, portfolio prioritization, or roadmap strategy.",
+    "source": "cpo-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cpp-pro",
+    "description": "Writes, optimizes, and debugs C++ applications using modern C++20/23 features, template metaprogramming, and high-performance systems techniques. Use when building or refactoring C++ code requiring concepts, ranges, coroutines, SIMD optimization, or careful memory management \u2014 or when addressing performance bottlenecks, concurrency issues, and build system configuration with CMake.",
+    "source": "cpp-pro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cro-advisor",
+    "description": "Revenue leadership for B2B SaaS companies. Revenue forecasting, sales model design, pricing strategy, net revenue retention, and sales team scaling. Use when designing the revenue engine, setting quotas, modeling NRR, evaluating pricing, building board forecasts, or when user mentions CRO, chief revenue officer, revenue strategy, sales model, ARR growth, NRR, expansion revenue, churn, pricing strategy, or sales capacity.",
+    "source": "cro-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cs-onboard",
+    "description": "Founder onboarding interview that captures company context across 7 dimensions. Invoke with /cs:setup for initial interview or /cs:update for quarterly refresh. Generates ~/.claude/company-context.md used by all C-suite advisor skills.",
+    "source": "cs-onboard",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "csharp-developer",
+    "description": "Use when building C# applications with .NET 8+, ASP.NET Core APIs, or Blazor web apps. Builds REST APIs using minimal or controller-based routing, configures database access with Entity Framework Core, implements async patterns and cancellation, structures applications with CQRS via MediatR, and scaffolds Blazor components with state management. Invoke for C#, .NET, ASP.NET Core, Blazor, Entity Framework, EF Core, Minimal API, MAUI, SignalR.",
+    "source": "csharp-developer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "cto-advisor",
+    "description": "Technical leadership guidance for engineering teams, architecture decisions, and technology strategy. Use when assessing technical debt, scaling engineering teams, evaluating technologies, making architecture decisions, establishing engineering metrics, or when user mentions CTO, tech debt, technical debt, team scaling, architecture decisions, technology evaluation, engineering metrics, DORA metrics, or technology strategy.",
+    "source": "cto-advisor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "culture-architect",
+    "description": "Build, measure, and evolve company culture as operational behavior \u2014 not wall posters. Covers mission/vision/values workshops, values-to-behaviors translation, culture code creation, culture health assessment, and cultural rituals by stage. Use when building company values, assessing culture health, designing cultural rituals, creating culture codes, handling culture clashes, or when user mentions culture, values, culture debt, founder culture, or culture code.",
+    "source": "culture-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "customer-success-manager",
+    "description": "Monitors customer health, predicts churn risk, and identifies expansion opportunities using weighted scoring models for SaaS customer success. Use when analyzing customer accounts, reviewing retention metrics, scoring at-risk customers, or when the user mentions churn, customer health scores, upsell opportunities, expansion revenue, retention analysis, or customer analytics. Runs three Python CLI tools to produce deterministic health scores, churn risk tiers, and prioritized expansion recommendations across Enterprise, Mid-Market, and SMB segments.",
+    "source": "customer-success-manager",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "data-quality-auditor",
+    "description": "Audit datasets for completeness, consistency, accuracy, and validity. Profile data distributions, detect anomalies and outliers, surface structural issues, and produce an actionable remediation plan.",
+    "source": "data-quality-auditor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "database-designer",
+    "description": "Use when the user asks to design database schemas, plan data migrations, optimize queries, choose between SQL and NoSQL, or model data relationships.",
+    "source": "database-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "database-optimizer",
+    "description": "Optimizes database queries and improves performance across PostgreSQL and MySQL systems. Use when investigating slow queries, analyzing execution plans, or optimizing database performance. Invoke for index design, query rewrites, configuration tuning, partitioning strategies, lock contention resolution.",
+    "source": "database-optimizer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "database-schema-designer",
+    "description": "Use when the user asks to create ERD diagrams, normalize database schemas, design table relationships, or plan schema migrations.",
+    "source": "database-schema-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "debugging-wizard",
+    "description": "Parses error messages, traces execution flow through stack traces, correlates log entries to identify failure points, and applies systematic hypothesis-driven methodology to isolate and resolve bugs. Use when investigating errors, analyzing stack traces, finding root causes of unexpected behavior, troubleshooting crashes, or performing log analysis, error investigation, or root cause analysis.",
+    "source": "debugging-wizard",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "decision-logger",
+    "description": "Two-layer memory architecture for board meeting decisions. Manages raw transcripts (Layer 1) and approved decisions (Layer 2). Use when logging decisions after a board meeting, reviewing past decisions with /cs:decisions, or checking overdue action items with /cs:review. Invoked automatically by the board-meeting skill after Phase 5 founder approval.",
+    "source": "decision-logger",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "demo-video",
+    "description": "Use when the user asks to create a demo video, product walkthrough, feature showcase, animated presentation, marketing video, or GIF from screenshots or scene descriptions. Orchestrates playwright, ffmpeg, and edge-tts MCPs to produce polished video content.",
+    "source": "demo-video",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "dependency-auditor",
+    "description": "Dependency Auditor",
+    "source": "dependency-auditor",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "devops-engineer",
+    "description": "Creates Dockerfiles, configures CI/CD pipelines, writes Kubernetes manifests, and generates Terraform/Pulumi infrastructure templates. Handles deployment automation, GitOps configuration, incident response runbooks, and internal developer platform tooling. Use when setting up CI/CD pipelines, containerizing applications, managing infrastructure as code, deploying to Kubernetes clusters, configuring cloud platforms, automating releases, or responding to production incidents. Invoke for pipelines, Docker, Kubernetes, GitOps, Terraform, GitHub Actions, on-call, or platform engineering.",
+    "source": "devops-engineer",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "django-expert",
+    "description": "Use when building Django web applications or REST APIs with Django REST Framework. Invoke when working with settings.py, models.py, manage.py, or any Django project file. Creates Django models with proper indexes, optimizes ORM queries using select_related/prefetch_related, builds DRF serializers and viewsets, and configures JWT authentication. Trigger terms: Django, DRF, Django REST Framework, Django ORM, Django model, serializer, viewset, Python web.",
+    "source": "django-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "docker-development",
+    "description": "Docker and container development agent skill and plugin for Dockerfile optimization, docker-compose orchestration, multi-stage builds, and container security hardening. Use when: user wants to optimize a Dockerfile, create or improve docker-compose configurations, implement multi-stage builds, audit container security, reduce image size, or follow container best practices. Covers build performance, layer caching, secret management, and production-ready container patterns.",
+    "source": "docker-development",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "dotnet-core-expert",
+    "description": "Use when building .NET 8 applications with minimal APIs, clean architecture, or cloud-native microservices. Invoke for Entity Framework Core, CQRS with MediatR, JWT authentication, AOT compilation.",
+    "source": "dotnet-core-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "email-sequence",
+    "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \"email sequence,\" \"drip campaign,\" \"nurture sequence,\" \"onboarding emails,\" \"welcome sequence,\" \"re-engagement emails,\" \"email automation,\" or \"lifecycle emails.\" For in-app onboarding, see onboarding-cro.",
+    "source": "email-sequence",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "email-template-builder",
+    "description": "Email Template Builder",
+    "source": "email-template-builder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "embedded-systems",
+    "description": "Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, ESP32, FreeRTOS, bare-metal, power optimization, real-time systems, configure peripherals, write interrupt handlers, implement DMA transfers, debug timing issues.",
+    "source": "embedded-systems",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "engineering-advanced-skills",
+    "description": "25 advanced engineering agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Agent design, RAG, MCP servers, CI/CD, database design, observability, security auditing, release management, platform ops.",
+    "source": "engineering-advanced-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "engineering-skills",
+    "description": "23 engineering agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw, and 6 more tools. Architecture, frontend, backend, QA, DevOps, security, AI/ML, data engineering, Playwright, Stripe, AWS, MS365. 30+ Python tools (stdlib-only).",
+    "source": "engineering-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "env-secrets-manager",
+    "description": "Env & Secrets Manager",
+    "source": "env-secrets-manager",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "epic-design",
+    "description": ">",
+    "source": "epic-design",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "eval",
+    "description": "Evaluate and rank agent results by metric or LLM judge for an AgentHub session.",
+    "source": "eval",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "executive-mentor",
+    "description": "Adversarial thinking partner for founders and executives. Stress-tests plans, prepares for brutal board meetings, dissects decisions with no good options, and forces honest post-mortems. Use when you need someone to find the holes before the board does, make a decision you've been avoiding, or understand what actually went wrong.",
+    "source": "executive-mentor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "experiment-designer",
+    "description": "Use when planning product experiments, writing testable hypotheses, estimating sample size, prioritizing tests, or interpreting A/B outcomes with practical statistical rigor.",
+    "source": "experiment-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "extract",
+    "description": "Turn a proven pattern or debugging solution into a standalone reusable skill with SKILL.md, reference docs, and examples.",
+    "source": "extract",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "fastapi-expert",
+    "description": "Use when building high-performance async Python APIs with FastAPI and Pydantic V2. Invoke to create REST endpoints, define Pydantic models, implement authentication flows, set up async SQLAlchemy database operations, add JWT authentication, build WebSocket endpoints, or generate OpenAPI documentation. Trigger terms: FastAPI, Pydantic, async Python, Python API, REST API Python, SQLAlchemy async, JWT authentication, OpenAPI, Swagger Python.",
+    "source": "fastapi-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "fda-consultant-specialist",
+    "description": "FDA regulatory consultant for medical device companies. Provides 510(k)/PMA/De Novo pathway guidance, QSR (21 CFR 820) compliance, HIPAA assessments, and device cybersecurity. Use when user mentions FDA submission, 510(k), PMA, De Novo, QSR, premarket, predicate device, substantial equivalence, HIPAA medical device, or FDA cybersecurity.",
+    "source": "fda-consultant-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "feature-forge",
+    "description": "Conducts structured requirements workshops to produce feature specifications, user stories, EARS-format functional requirements, acceptance criteria, and implementation checklists. Use when defining new features, gathering requirements, or writing specifications. Invoke for feature definition, requirements gathering, user stories, EARS format specs, PRDs, acceptance criteria, or requirement matrices.",
+    "source": "feature-forge",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "finance-skills",
+    "description": "Financial analyst agent skill and plugin for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Ratio analysis, DCF valuation, budget variance, rolling forecasts. 4 Python tools (stdlib-only).",
+    "source": "finance-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "financial-analyst",
+    "description": "Performs financial ratio analysis, DCF valuation, budget variance analysis, and rolling forecast construction for strategic decision-making. Use when analyzing financial statements, building valuation models, assessing budget variances, or constructing financial projections and forecasts. Also applicable when users mention financial modeling, cash flow analysis, company valuation, financial projections, or spreadsheet analysis.",
+    "source": "financial-analyst",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "fine-tuning-expert",
+    "description": "Use when fine-tuning LLMs, training custom models, or adapting foundation models for specific tasks. Invoke for configuring LoRA/QLoRA adapters, preparing JSONL training datasets, setting hyperparameters for fine-tuning runs, adapter training, transfer learning, finetuning with Hugging Face PEFT, OpenAI fine-tuning, instruction tuning, RLHF, DPO, or quantizing and deploying fine-tuned models. Trigger terms include: LoRA, QLoRA, PEFT, finetuning, fine-tuning, adapter tuning, LLM training, model training, custom model.",
+    "source": "fine-tuning-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "fix",
+    "description": ">-",
+    "source": "fix",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "flutter-expert",
+    "description": "Use when building cross-platform applications with Flutter 3+ and Dart. Invoke for widget development, Riverpod/Bloc state management, GoRouter navigation, platform-specific implementations, performance optimization.",
+    "source": "flutter-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "focused-fix",
+    "description": "Use when the user asks to fix, debug, or make a specific feature/module/area work end-to-end. Triggers: 'make X work', 'fix the Y feature', 'the Z module is broken', 'focus on [area]'. Not for quick single-bug fixes \u2014 this is for systematic deep-dive repair across all files and dependencies.",
+    "source": "focused-fix",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "form-cro",
+    "description": "When the user wants to optimize any form that is NOT signup/registration \u2014 including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions \"form optimization,\" \"lead form conversions,\" \"form friction,\" \"form fields,\" \"form completion rate,\" or \"contact form.\" For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.",
+    "source": "form-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "founder-coach",
+    "description": "Personal leadership development for founders and first-time CEOs. Covers founder archetype identification, delegation frameworks, energy management, CEO calendar audits, leadership style evolution, blind spot identification, imposter syndrome, founder mental health, and succession planning. Use when a founder feels like the bottleneck, struggles to delegate, is burning out, transitioning from IC to executive, managing a board, or when user mentions founder mode, CEO growth, leadership development, delegation, burnout, or imposter syndrome.",
+    "source": "founder-coach",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "free-tool-strategy",
+    "description": "When the user wants to build a free tool for marketing \u2014 lead generation, SEO value, or brand awareness. Use when they mention 'engineering as marketing,' 'free tool,' 'calculator,' 'generator,' 'checker,' 'grader,' 'marketing tool,' 'lead gen tool,' 'build something for traffic,' 'interactive tool,' or 'free resource.' Covers idea evaluation, tool design, and launch strategy. For pure SEO content strategy (no tool), use seo-audit or content-strategy instead.",
+    "source": "free-tool-strategy",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "full-page-screenshot",
+    "description": "Use when the user asks to capture a full-page screenshot, long screenshot, or complete page capture of a web page. Handles SPA scroll containers, lazy-loaded images, and very tall pages via Chrome DevTools Protocol with zero external dependencies.",
+    "source": "full-page-screenshot",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "fullstack-guardian",
+    "description": "Builds security-focused full-stack web applications by implementing integrated frontend and backend components with layered security at every level. Covers the complete stack from database to UI, enforcing auth, input validation, output encoding, and parameterized queries across all layers. Use when implementing features across frontend and backend, building REST APIs with corresponding UI, connecting frontend components to backend endpoints, creating end-to-end data flows from database to UI, or implementing CRUD operations with UI forms. Distinct from frontend-only, backend-only, or API-only skills in that it simultaneously addresses all three perspectives\u2014Frontend, Backend, and Security\u2014within a single implementation workflow. Invoke for full-stack feature work, web app development, authenticated API routes with views, microservices, real-time features, monorepo architecture, or technology selection decisions.",
+    "source": "fullstack-guardian",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "game-developer",
+    "description": "Use when building game systems, implementing Unity/Unreal Engine features, or optimizing game performance. Invoke to implement ECS architecture, configure physics systems and colliders, set up multiplayer networking with lag compensation, optimize frame rates to 60+ FPS targets, develop shaders, or apply game design patterns such as object pooling and state machines. Trigger keywords: Unity, Unreal Engine, game development, ECS architecture, game physics, multiplayer networking, game optimization, shader programming, game AI.",
+    "source": "game-developer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "gcp-cloud-architect",
+    "description": "Design GCP architectures for startups and enterprises. Use when asked to design Google Cloud infrastructure, deploy to GKE or Cloud Run, configure BigQuery pipelines, optimize GCP costs, or migrate to GCP. Covers Cloud Run, GKE, Cloud Functions, Cloud SQL, BigQuery, and cost optimization.",
+    "source": "gcp-cloud-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "gdpr-dsgvo-expert",
+    "description": "GDPR and German DSGVO compliance automation. Scans codebases for privacy risks, generates DPIA documentation, tracks data subject rights requests. Use for GDPR compliance assessments, privacy audits, data protection planning, DPIA generation, and data subject rights management.",
+    "source": "gdpr-dsgvo-expert",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "generate",
+    "description": ">-",
+    "source": "generate",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "git-worktree-manager",
+    "description": "Git Worktree Manager",
+    "source": "git-worktree-manager",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "golang-pro",
+    "description": "Implements concurrent Go patterns using goroutines and channels, designs and builds microservices with gRPC or REST, optimizes Go application performance with pprof, and enforces idiomatic Go with generics, interfaces, and robust error handling. Use when building Go applications requiring concurrent programming, microservices architecture, or high-performance systems. Invoke for goroutines, channels, Go generics, gRPC integration, CLI tools, benchmarks, or table-driven testing.",
+    "source": "golang-pro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "google-workspace-cli",
+    "description": "Google Workspace administration via the gws CLI. Install, authenticate, and automate Gmail, Drive, Sheets, Calendar, Docs, Chat, and Tasks. Run security audits, execute 43 built-in recipes, and use 10 persona bundles. Use for Google Workspace admin, gws CLI setup, Gmail automation, Drive management, or Calendar scheduling.",
+    "source": "google-workspace-cli",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "graphql-architect",
+    "description": "Use when designing GraphQL schemas, implementing Apollo Federation, or building real-time subscriptions. Invoke for schema design, resolvers with DataLoader, query optimization, federation directives.",
+    "source": "graphql-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "hard-call",
+    "description": "/em -hard-call \u2014 Framework for Decisions With No Good Options",
+    "source": "hard-call",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "helm-chart-builder",
+    "description": "Helm chart development agent skill and plugin for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw \u2014 chart scaffolding, values design, template patterns, dependency management, security hardening, and chart testing. Use when: user wants to create or improve Helm charts, design values.yaml files, implement template helpers, audit chart security (RBAC, network policies, pod security), manage subcharts, or run helm lint/test.",
+    "source": "helm-chart-builder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "incident-commander",
+    "description": "Incident Commander Skill",
+    "source": "incident-commander",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "incident-response",
+    "description": "Use when a security incident has been detected or declared and needs classification, triage, escalation path determination, and forensic evidence collection. Covers SEV1-SEV4 classification, false positive filtering, incident taxonomy, and NIST SP 800-61 lifecycle.",
+    "source": "incident-response",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "information-security-manager-iso27001",
+    "description": "ISO 27001 ISMS implementation and cybersecurity governance for HealthTech and MedTech companies. Use for ISMS design, security risk assessment, control implementation, ISO 27001 certification, security audits, incident response, and compliance verification. Covers ISO 27001, ISO 27002, healthcare security, and medical device cybersecurity.",
+    "source": "information-security-manager-iso27001",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "init-playwright",
+    "description": ">-",
+    "source": "init-playwright",
+    "state": "on",
+    "agents": []
+  },
+  {
+    "name": "internal-narrative",
+    "description": "Build and maintain one coherent company story across all audiences \u2014 employees, investors, customers, candidates, and partners. Detects narrative contradictions and ensures the same truth is framed for each audience's needs. Use when preparing investor updates, all-hands presentations, board communications, recruiting narratives, crisis communications, or when user mentions company narrative, messaging consistency, storytelling, all-hands, investor update, or crisis communication.",
+    "source": "internal-narrative",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "interview-system-designer",
+    "description": "This skill should be used when the user asks to \"design interview processes\", \"create hiring pipelines\", \"calibrate interview loops\", \"generate interview questions\", \"design competency matrices\", \"analyze interviewer bias\", \"create scoring rubrics\", \"build question banks\", or \"optimize hiring systems\". Use for designing role-specific interview loops, competency assessments, and hiring calibration systems.",
+    "source": "interview-system-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "intl-expansion",
+    "description": "International market expansion strategy. Market selection, entry modes, localization, regulatory compliance, and go-to-market by region. Use when expanding to new countries, evaluating international markets, planning localization, or building regional teams.",
+    "source": "intl-expansion",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "isms-audit-expert",
+    "description": "Information Security Management System (ISMS) audit expert for ISO 27001 compliance verification, security control assessment, and certification support. Use when the user mentions ISO 27001, ISMS audit, Annex A controls, Statement of Applicability (SOA), gap analysis, nonconformity management, internal audit, surveillance audit, or security certification preparation. Helps review control implementation evidence, document audit findings, classify nonconformities, generate risk-based audit plans, map controls to Annex A requirements, prepare Stage 1 and Stage 2 audit documentation, and support corrective action workflows.",
+    "source": "isms-audit-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "java-architect",
+    "description": "Use when building, configuring, or debugging enterprise Java applications with Spring Boot 3.x, microservices, or reactive programming. Invoke to implement WebFlux endpoints, optimize JPA queries and database performance, configure Spring Security with OAuth2/JWT, or resolve authentication issues and async processing challenges in cloud-native Spring applications.",
+    "source": "java-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "javascript-pro",
+    "description": "Writes, debugs, and refactors JavaScript code using modern ES2023+ features, async/await patterns, ESM module systems, and Node.js APIs. Use when building vanilla JavaScript applications, implementing Promise-based async flows, optimising browser or Node.js performance, working with Web Workers or Fetch API, or reviewing .js/.mjs/.cjs files for correctness and best practices.",
+    "source": "javascript-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "jira-expert",
+    "description": "Atlassian Jira expert for creating and managing projects, planning, product discovery, JQL queries, workflows, custom fields, automation, reporting, and all Jira features. Use for Jira project setup, configuration, advanced search, dashboard creation, workflow design, and technical Jira operations.",
+    "source": "jira-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "karpathy-coder",
+    "description": "Use when writing, reviewing, or committing code to enforce Karpathy's 4 coding principles \u2014 surface assumptions before coding, keep it simple, make surgical changes, define verifiable goals. Triggers on \"review my diff\", \"check complexity\", \"am I overcomplicating this\", \"karpathy check\", \"before I commit\", or any code quality concern where the LLM might be overcoding.",
+    "source": "karpathy-coder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "kotlin-specialist",
+    "description": "Provides idiomatic Kotlin implementation patterns including coroutine concurrency, Flow stream handling, multiplatform architecture, Compose UI construction, Ktor server setup, and type-safe DSL design. Use when building Kotlin applications requiring coroutines, multiplatform development, or Android with Compose. Invoke for Flow API, KMP projects, Ktor servers, DSL design, sealed classes, suspend function, Android Kotlin, Kotlin Multiplatform.",
+    "source": "kotlin-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "kubernetes-specialist",
+    "description": "Use when deploying or managing Kubernetes workloads. Invoke to create deployment manifests, configure pod security policies, set up service accounts, define network isolation rules, debug pod crashes, analyze resource limits, inspect container logs, or right-size workloads. Use for Helm charts, RBAC policies, NetworkPolicies, storage configuration, performance optimization, GitOps pipelines, and multi-cluster management.",
+    "source": "kubernetes-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "landing-page-generator",
+    "description": "Generates high-converting landing pages as complete Next.js/React (TSX) components with Tailwind CSS. Creates hero sections, feature grids, pricing tables, FAQ accordions, testimonial blocks, and CTA sections using proven copy frameworks (PAS, AIDA, BAB). Outputs SEO meta tags, structured data, and performance-optimised code targeting Core Web Vitals (LCP < 1s, CLS < 0.1). Use when the user asks to create a landing page, marketing page, homepage, single-page site, lead capture page, campaign page, promo page, or conversion-optimised web page \u2014 or when they want to A/B test landing page variants or replace a static page with one designed to convert.",
+    "source": "landing-page-generator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "laravel-specialist",
+    "description": "Build and configure Laravel 10+ applications, including creating Eloquent models and relationships, implementing Sanctum authentication, configuring Horizon queues, designing RESTful APIs with API resources, and building reactive interfaces with Livewire. Use when creating Laravel models, setting up queue workers, implementing Sanctum auth flows, building Livewire components, optimising Eloquent queries, or writing Pest/PHPUnit tests for Laravel features.",
+    "source": "laravel-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "launch-strategy",
+    "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'GTM plan,' 'launch checklist,' or 'launch momentum.' This skill covers phased launches, channel strategy, and ongoing launch momentum.",
+    "source": "launch-strategy",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "legacy-modernizer",
+    "description": "Designs incremental migration strategies, identifies service boundaries, produces dependency maps and migration roadmaps, and generates API facade designs for aging codebases. Use when modernizing legacy systems, implementing strangler fig pattern or branch by abstraction, decomposing monoliths, upgrading frameworks or languages, or reducing technical debt without disrupting business operations.",
+    "source": "legacy-modernizer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "llm-wiki",
+    "description": "Use when building or maintaining a persistent personal knowledge base (second brain) in Obsidian where an LLM incrementally ingests sources, updates entity/concept pages, maintains cross-references, and keeps a synthesis current. Triggers include \"second brain\", \"Obsidian wiki\", \"personal knowledge management\", \"ingest this paper/article/book\", \"build a research wiki\", \"compound knowledge\", \"Memex\", or whenever the user wants knowledge to accumulate across sessions instead of being re-derived by RAG on every query.",
+    "source": "llm-wiki",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "loop",
+    "description": "Start an autonomous experiment loop with user-selected interval (10min, 1h, daily, weekly, monthly). Uses CronCreate for scheduling.",
+    "source": "loop",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ma-playbook",
+    "description": "M&A strategy for acquiring companies or being acquired. Due diligence, valuation, integration, and deal structure. Use when evaluating acquisitions, preparing for acquisition, M&A due diligence, integration planning, or deal negotiation.",
+    "source": "ma-playbook",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-context",
+    "description": "Create and maintain the marketing context document that all marketing skills read before starting. Use when the user mentions 'marketing context,' 'brand voice,' 'set up context,' 'target audience,' 'ICP,' 'style guide,' 'who is my customer,' 'positioning,' or wants to avoid repeating foundational information across marketing tasks. Run this at the start of any new project before using other marketing skills.",
+    "source": "marketing-context",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-demand-acquisition",
+    "description": "Creates demand generation campaigns, optimizes paid ad spend across LinkedIn, Google, and Meta, develops SEO strategies, and structures partnership programs for Series A+ startups scaling internationally. Use when planning marketing strategy, growth marketing, advertising campaigns, PPC optimization, lead generation, pipeline generation, or startup marketing budgets. Covers multi-channel acquisition (Google Ads, LinkedIn Ads, Meta Ads), CAC analysis, MQL/SQL workflows, attribution modeling, technical SEO, and co-marketing partnerships for hybrid PLG/Sales-Led motions in EU/US/Canada markets.",
+    "source": "marketing-demand-acquisition",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-ideas",
+    "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' or 'ideas to grow.' This skill provides 139 proven marketing approaches organized by category.",
+    "source": "marketing-ideas",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-ops",
+    "description": "Central router for the marketing skill ecosystem. Use when unsure which marketing skill to use, when orchestrating a multi-skill campaign, or when coordinating across content, SEO, CRO, channels, and analytics. Also use when the user mentions 'marketing help,' 'campaign plan,' 'what should I do next,' 'marketing priorities,' or 'coordinate marketing.'",
+    "source": "marketing-ops",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-psychology",
+    "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application.",
+    "source": "marketing-psychology",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-skills",
+    "description": "42 marketing agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw, and 6 more coding agents. 7 pods: content, SEO, CRO, channels, growth, intelligence, sales. Foundation context + orchestration router. 27 Python tools (stdlib-only).",
+    "source": "marketing-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "marketing-strategy-pmm",
+    "description": "Product marketing skill for positioning, GTM strategy, competitive intelligence, and product launches. Use when the user asks about product positioning, go-to-market planning, competitive analysis, target audience definition, ICP definition, market research, launch plans, or sales enablement. Covers April Dunford positioning, ICP definition, competitive battlecards, launch playbooks, and international market entry. Produces deliverables including positioning statements, battlecard documents, launch plans, and go-to-market strategies.",
+    "source": "marketing-strategy-pmm",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "mcp-developer",
+    "description": "Use when building, debugging, or extending MCP servers or clients that connect AI systems with external tools and data sources. Invoke to implement tool handlers, configure resource providers, set up stdio/HTTP/SSE transport layers, validate schemas with Zod or Pydantic, debug protocol compliance issues, or scaffold complete MCP server/client projects using TypeScript or Python SDKs.",
+    "source": "mcp-developer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "mcp-server-builder",
+    "description": "MCP Server Builder",
+    "source": "mcp-server-builder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "mdr-745-specialist",
+    "description": "EU MDR 2017/745 compliance specialist for medical device classification, technical documentation, clinical evidence, and post-market surveillance. Covers Annex VIII classification rules, Annex II/III technical files, Annex XIV clinical evaluation, and EUDAMED integration.",
+    "source": "mdr-745-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "meeting-analyzer",
+    "description": "Analyzes meeting transcripts and recordings to surface behavioral patterns, communication anti-patterns, and actionable coaching feedback. Use this skill whenever the user uploads or points to meeting transcripts (.txt, .md, .vtt, .srt, .docx), asks about their communication habits, wants feedback on how they run meetings, requests speaking ratio analysis, mentions filler words or conflict avoidance, or wants to compare their communication across time periods. Also trigger when users mention tools like Granola, Otter, Fireflies, or Zoom transcripts. Even if the user just says \"look at my meetings\" or \"how do I come across in meetings\" \u2014 use this skill.",
+    "source": "meeting-analyzer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "merge",
+    "description": "Merge the winning agent's branch into base, archive losers, and clean up worktrees.",
+    "source": "merge",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "microservices-architect",
+    "description": "Designs distributed system architectures, decomposes monoliths into bounded-context services, recommends communication patterns, and produces service boundary diagrams and resilience strategies. Use when designing distributed systems, decomposing monoliths, or implementing microservices patterns \u2014 including service boundaries, DDD, saga patterns, event sourcing, CQRS, service mesh, or distributed tracing.",
+    "source": "microservices-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "migrate",
+    "description": ">-",
+    "source": "migrate",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "migration-architect",
+    "description": "Migration Architect",
+    "source": "migration-architect",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ml-pipeline",
+    "description": "Designs and implements production-grade ML pipeline infrastructure: configures experiment tracking with MLflow or Weights & Biases, creates Kubeflow or Airflow DAGs for training orchestration, builds feature store schemas with Feast, deploys model registries, and automates retraining and validation workflows. Use when building ML pipelines, orchestrating training workflows, automating model lifecycle, implementing feature stores, managing experiment tracking systems, setting up DVC for data versioning, tuning hyperparameters, or configuring MLOps tooling like Kubeflow, Airflow, MLflow, or Prefect.",
+    "source": "ml-pipeline",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "monitoring-expert",
+    "description": "Configures monitoring systems, implements structured logging pipelines, creates Prometheus/Grafana dashboards, defines alerting rules, and instruments distributed tracing. Implements Prometheus/Grafana stacks, conducts load testing, performs application profiling, and plans infrastructure capacity. Use when setting up application monitoring, adding observability to services, debugging production issues with logs/metrics/traces, running load tests with k6 or Artillery, profiling CPU/memory bottlenecks, or forecasting capacity needs.",
+    "source": "monitoring-expert",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "monorepo-navigator",
+    "description": "Monorepo Navigator",
+    "source": "monorepo-navigator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ms365-tenant-manager",
+    "description": "Microsoft 365 tenant administration for Global Administrators. Automate M365 tenant setup, Office 365 admin tasks, Azure AD user management, Exchange Online configuration, Teams administration, and security policies. Generate PowerShell scripts for bulk operations, Conditional Access policies, license management, and compliance reporting. Use for M365 tenant manager, Office 365 admin, Azure AD users, Global Administrator, tenant configuration, or Microsoft 365 automation.",
+    "source": "ms365-tenant-manager",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "nestjs-expert",
+    "description": "Creates and configures NestJS modules, controllers, services, DTOs, guards, and interceptors for enterprise-grade TypeScript backend applications. Use when building NestJS REST APIs or GraphQL services, implementing dependency injection, scaffolding modular architecture, adding JWT/Passport authentication, integrating TypeORM or Prisma, or working with .module.ts, .controller.ts, and .service.ts files. Invoke for guards, interceptors, pipes, validation, Swagger documentation, and unit/E2E testing in NestJS projects.",
+    "source": "nestjs-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "nextjs-developer",
+    "description": "Use when building Next.js 14+ applications with App Router, server components, or server actions. Invoke to configure route handlers, implement middleware, set up API routes, add streaming SSR, write generateMetadata for SEO, scaffold loading.tsx/error.tsx boundaries, or deploy to Vercel. Triggers on: Next.js, Next.js 14, App Router, RSC, use server, Server Components, Server Actions, React Server Components, generateMetadata, loading.tsx, Next.js deployment, Vercel, Next.js performance.",
+    "source": "nextjs-developer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "observability-designer",
+    "description": "Observability Designer (POWERFUL)",
+    "source": "observability-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "onboarding-cro",
+    "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \"onboarding flow,\" \"activation rate,\" \"user activation,\" \"first-run experience,\" \"empty states,\" \"onboarding checklist,\" \"aha moment,\" or \"new user experience.\" For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
+    "source": "onboarding-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "org-health-diagnostic",
+    "description": "Cross-functional organizational health check combining signals from all C-suite roles. Scores 8 dimensions on a traffic-light scale with drill-down recommendations. Use when assessing overall company health, preparing for board reviews, identifying at-risk functions, or when user mentions org health, health check, or health dashboard.",
+    "source": "org-health-diagnostic",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "page-cro",
+    "description": "When the user wants to optimize, improve, or increase conversions on any marketing page \u2014 including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \"CRO,\" \"conversion rate optimization,\" \"this page isn't converting,\" \"improve conversions,\" or \"why isn't this page working.\" For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.",
+    "source": "page-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "paid-ads",
+    "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ad copy,' 'ad creative,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' or 'audience targeting.' This skill covers campaign strategy, ad creation, audience targeting, and optimization.",
+    "source": "paid-ads",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "pandas-pro",
+    "description": "Performs pandas DataFrame operations for data analysis, manipulation, and transformation. Use when working with pandas DataFrames, data cleaning, aggregation, merging, or time series analysis. Invoke for data manipulation tasks such as joining DataFrames on multiple keys, pivoting tables, resampling time series, handling NaN values with interpolation or forward-fill, groupby aggregations, type conversion, or performance optimization of large datasets.",
+    "source": "pandas-pro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "paywall-upgrade-cro",
+    "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \"paywall,\" \"upgrade screen,\" \"upgrade modal,\" \"upsell,\" \"feature gate,\" \"convert free to paid,\" \"freemium conversion,\" \"trial expiration screen,\" \"limit reached screen,\" \"plan upgrade prompt,\" or \"in-app pricing.\" Distinct from public pricing pages (see page-cro) \u2014 this skill focuses on in-product upgrade moments where the user has already experienced value.",
+    "source": "paywall-upgrade-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "performance-profiler",
+    "description": "Performance Profiler",
+    "source": "performance-profiler",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "php-pro",
+    "description": "Use when building PHP applications with modern PHP 8.3+ features, Laravel, or Symfony frameworks. Invokes strict typing, PHPStan level 9, async patterns with Swoole, and PSR standards. Creates controllers, configures middleware, generates migrations, writes PHPUnit/Pest tests, defines typed DTOs and value objects, sets up dependency injection, and scaffolds REST/GraphQL APIs. Use when working with Eloquent, Doctrine, Composer, Psalm, ReactPHP, or any PHP API development.",
+    "source": "php-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "playwright-expert",
+    "description": "Use when writing E2E tests with Playwright, setting up test infrastructure, or debugging flaky browser tests. Invoke to write test scripts, create page objects, configure test fixtures, set up reporters, add CI integration, implement API mocking, or perform visual regression testing. Trigger terms: Playwright, E2E test, end-to-end, browser testing, automation, UI testing, visual testing, Page Object Model, test flakiness.",
+    "source": "playwright-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "playwright-pro",
+    "description": "Production-grade Playwright testing toolkit. Use when the user mentions Playwright tests, end-to-end testing, browser automation, fixing flaky tests, test migration, CI/CD testing, or test suites. Generate tests, fix flaky failures, migrate from Cypress/Selenium, sync with TestRail, run on BrowserStack. 55 templates, 3 agents, smart reporting.",
+    "source": "playwright-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "pm-skills",
+    "description": "6 project management agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Senior PM, scrum master, Jira expert (JQL), Confluence expert, Atlassian admin, template creator. MCP integration for live Jira/Confluence automation.",
+    "source": "pm-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "popup-cro",
+    "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \"exit intent,\" \"popup conversions,\" \"modal optimization,\" \"lead capture popup,\" \"email popup,\" \"announcement banner,\" or \"overlay.\" For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.",
+    "source": "popup-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "postgres-pro",
+    "description": "Use when optimizing PostgreSQL queries, configuring replication, or implementing advanced database features. Invoke for EXPLAIN analysis, JSONB operations, extension usage, VACUUM tuning, performance monitoring.",
+    "source": "postgres-pro",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "postmortem",
+    "description": "/em -postmortem \u2014 Honest Analysis of What Went Wrong",
+    "source": "postmortem",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "pr-review-expert",
+    "description": "Use when the user asks to review pull requests, analyze code changes, check for security issues in PRs, or assess code quality of diffs.",
+    "source": "pr-review-expert",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "pricing-strategy",
+    "description": "Design, optimize, and communicate SaaS pricing \u2014 tier structure, value metrics, pricing pages, and price increase strategy. Use when building a pricing model from scratch, redesigning existing pricing, planning a price increase, or improving a pricing page. Trigger keywords: pricing tiers, pricing page, price increase, packaging, value metric, per seat pricing, usage-based pricing, freemium, good-better-best, pricing strategy, monetization, pricing page conversion, Van Westendorp. NOT for broader product strategy \u2014 use product-strategist for that. NOT for customer success or renewals \u2014 use customer-success-manager for expansion revenue.",
+    "source": "pricing-strategy",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "product-analytics",
+    "description": "Use when defining product KPIs, building metric dashboards, running cohort or retention analysis, or interpreting feature adoption trends across product stages.",
+    "source": "product-analytics",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "product-discovery",
+    "description": "Use when validating product opportunities, mapping assumptions, planning discovery sprints, or testing problem-solution fit before committing delivery resources.",
+    "source": "product-discovery",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "product-manager-toolkit",
+    "description": "Comprehensive toolkit for product managers including RICE prioritization, customer interview analysis, PRD templates, discovery frameworks, and go-to-market strategies. Use for feature prioritization, user research synthesis, requirement documentation, and product strategy development.",
+    "source": "product-manager-toolkit",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "product-skills",
+    "description": "10 product agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. PM toolkit (RICE), agile PO, product strategist (OKR), UX researcher, UI design system, competitive teardown, landing page generator, SaaS scaffolder, research summarizer. Python tools (stdlib-only).",
+    "source": "product-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "product-strategist",
+    "description": "Strategic product leadership toolkit for Head of Product covering OKR cascade generation, quarterly planning, competitive landscape analysis, product vision documents, and team scaling proposals. Use when creating quarterly OKR documents, defining product goals or KPIs, building product roadmaps, running competitive analysis, drafting team structure or hiring plans, aligning product strategy across engineering and design, or generating cascaded goal hierarchies from company to team level.",
+    "source": "product-strategist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "programmatic-seo",
+    "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \"programmatic SEO,\" \"template pages,\" \"pages at scale,\" \"directory pages,\" \"location pages,\" \"[keyword] + [city] pages,\" \"comparison pages,\" \"integration pages,\" or \"building many pages for SEO.\" For auditing existing SEO issues, see seo-audit.",
+    "source": "programmatic-seo",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "promote",
+    "description": "Graduate a proven pattern from auto-memory (MEMORY.md) to CLAUDE.md or .claude/rules/ for permanent enforcement.",
+    "source": "promote",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "prompt-engineer",
+    "description": "Writes, refactors, and evaluates prompts for LLMs \u2014 generating optimized prompt templates, structured output schemas, evaluation rubrics, and test suites. Use when designing prompts for new LLM applications, refactoring existing prompts for better accuracy or token efficiency, implementing chain-of-thought or few-shot learning, creating system prompts with personas and guardrails, building JSON/function-calling schemas, or developing prompt evaluation frameworks to measure and improve model performance.",
+    "source": "prompt-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "prompt-engineer-toolkit",
+    "description": "Analyzes and rewrites prompts for better AI output, creates reusable prompt templates for marketing use cases (ad copy, email campaigns, social media), and structures end-to-end AI content workflows. Use when the user wants to improve prompts for AI-assisted marketing, build prompt templates, or optimize AI content workflows. Also use when the user mentions 'prompt engineering,' 'improve my prompts,' 'AI writing quality,' 'prompt templates,' or 'AI content workflow.'",
+    "source": "prompt-engineer-toolkit",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "python-pro",
+    "description": "Use when building Python 3.11+ applications requiring type safety, async programming, or robust error handling. Generates type-annotated Python code, configures mypy in strict mode, writes pytest test suites with fixtures and mocking, and validates code with black and ruff. Invoke for type hints, async/await patterns, dataclasses, dependency injection, logging configuration, and structured error handling.",
+    "source": "python-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "qms-audit-expert",
+    "description": "ISO 13485 internal audit expertise for medical device QMS. Covers audit planning, execution, nonconformity classification, and CAPA verification. Use for internal audit planning, audit execution, finding classification, external audit preparation, or audit program management.",
+    "source": "qms-audit-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "quality-documentation-manager",
+    "description": "Document control system management for medical device QMS. Covers document numbering, version control, change management, and 21 CFR Part 11 compliance. Use for document control procedures, change control workflow, document numbering, version management, electronic signature compliance, or regulatory documentation review.",
+    "source": "quality-documentation-manager",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "quality-manager-qmr",
+    "description": "Senior Quality Manager Responsible Person (QMR) for HealthTech and MedTech companies. Provides quality system governance, management review leadership, regulatory compliance oversight, and quality performance monitoring per ISO 13485 Clause 5.5.2.",
+    "source": "quality-manager-qmr",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "quality-manager-qms-iso13485",
+    "description": "ISO 13485 Quality Management System implementation and maintenance for medical device organizations. Provides QMS design, documentation control, internal auditing, CAPA management, and certification support. Use when working with medical device quality systems, preparing for ISO 13485 audits, managing regulatory compliance documentation, setting up corrective actions, or building audit preparation programs. Useful for quality management, audit preparation, regulatory compliance, medical device documentation, and corrective action workflows.",
+    "source": "quality-manager-qms-iso13485",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ra-qm-skills",
+    "description": "12 regulatory & QM agent skills and plugins for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. ISO 13485 QMS, MDR 2017/745, FDA 510(k)/PMA, ISO 27001 ISMS, GDPR/DSGVO, risk management (ISO 14971), CAPA, document control, auditing. Python tools (stdlib-only).",
+    "source": "ra-qm-skills",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "rag-architect",
+    "description": "Designs and implements production-grade RAG systems by chunking documents, generating embeddings, configuring vector stores, building hybrid search pipelines, applying reranking, and evaluating retrieval quality. Use when building RAG systems, vector databases, or knowledge-grounded AI applications requiring semantic search, document retrieval, context augmentation, similarity search, or embedding-based indexing.",
+    "source": "rag-architect",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "rails-expert",
+    "description": "Rails 7+ specialist that optimizes Active Record queries with includes/eager_load, implements Turbo Frames and Turbo Streams for partial page updates, configures Action Cable for WebSocket connections, sets up Sidekiq workers for background job processing, and writes comprehensive RSpec test suites. Use when building Rails 7+ web applications with Hotwire, real-time features, or background job processing. Invoke for Active Record optimization, Turbo Frames/Streams, Action Cable, Sidekiq, RSpec Rails.",
+    "source": "rails-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "react-expert",
+    "description": "Use when building React 18+ applications in .jsx or .tsx files, Next.js App Router projects, or create-react-app setups. Creates components, implements custom hooks, debugs rendering issues, migrates class components to functional, and implements state management. Invoke for Server Components, Suspense boundaries, useActionState forms, performance optimization, or React 19 features.",
+    "source": "react-expert",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "react-native-expert",
+    "description": "Builds, optimizes, and debugs cross-platform mobile applications with React Native and Expo. Implements navigation hierarchies (tabs, stacks, drawers), configures native modules, optimizes FlatList rendering with memo and useCallback, and handles platform-specific code for iOS and Android. Use when building a React Native or Expo mobile app, setting up navigation, integrating native modules, improving scroll performance, handling SafeArea or keyboard input, or configuring Expo SDK projects.",
+    "source": "react-native-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "red-team",
+    "description": "Use when planning or executing authorized red team engagements, attack path analysis, or offensive security simulations. Covers MITRE ATT&CK kill-chain planning, technique scoring, choke point identification, OPSEC risk assessment, and crown jewel targeting.",
+    "source": "red-team",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "referral-program",
+    "description": "When the user wants to design, launch, or optimize a referral or affiliate program. Use when they mention 'referral program,' 'affiliate program,' 'word of mouth,' 'refer a friend,' 'incentive program,' 'customer referrals,' 'brand ambassador,' 'partner program,' 'referral link,' or 'growth through referrals.' Covers program mechanics, incentive design, and optimization \u2014 not just the idea of referrals but the actual system.",
+    "source": "referral-program",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "regulatory-affairs-head",
+    "description": "Senior Regulatory Affairs Manager for HealthTech and MedTech companies. Prepares FDA 510(k), De Novo, and PMA submission packages; analyzes regulatory pathways for new medical devices; drafts responses to FDA deficiency letters and Notified Body queries; develops CE marking technical documentation under EU MDR 2017/745; coordinates multi-market approval strategies across FDA, EU, Health Canada, PMDA, and NMPA; and maintains regulatory intelligence on evolving standards. Use when users need to plan or execute FDA submissions, navigate 510(k) or PMA approval processes, achieve CE marking, prepare pre-submission meeting materials, write regulatory strategy documents, respond to agency queries, or manage compliance documentation for medical device market access.",
+    "source": "regulatory-affairs-head",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "release-manager",
+    "description": "Use when the user asks to plan releases, manage changelogs, coordinate deployments, create release branches, or automate versioning.",
+    "source": "release-manager",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "remember",
+    "description": "Explicitly save important knowledge to auto-memory with timestamp and context. Use when a discovery is too important to rely on auto-capture.",
+    "source": "remember",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "report",
+    "description": ">-",
+    "source": "report",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "research-summarizer",
+    "description": "Structured research summarization agent skill for non-dev users. Handles academic papers, web articles, reports, and documentation. Extracts key findings, generates comparative analyses, and produces properly formatted citations. Use when: user wants to summarize a research paper, compare multiple sources, extract citations from documents, or create structured research briefs. Plugin for Claude Code, Codex, Gemini CLI, and OpenClaw.",
+    "source": "research-summarizer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ar-resume",
+    "description": "Resume a paused experiment. Checkout the experiment branch, read results history, continue iterating.",
+    "source": "ar-resume",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "revenue-operations",
+    "description": "Analyzes sales pipeline health, revenue forecasting accuracy, and go-to-market efficiency metrics for SaaS revenue optimization. Use when analyzing sales pipeline coverage, forecasting revenue, evaluating go-to-market performance, reviewing sales metrics, assessing pipeline analysis, tracking forecast accuracy with MAPE, calculating GTM efficiency, or measuring sales efficiency and unit economics for SaaS teams.",
+    "source": "revenue-operations",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "review",
+    "description": ">-",
+    "source": "review",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "risk-management-specialist",
+    "description": "Medical device risk management specialist implementing ISO 14971 throughout product lifecycle. Provides risk analysis, risk evaluation, risk control, and post-production information analysis. Use when user mentions risk management, ISO 14971, risk analysis, FMEA, fault tree analysis, hazard identification, risk control, risk matrix, benefit-risk analysis, residual risk, risk acceptability, or post-market risk.",
+    "source": "risk-management-specialist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "roadmap-communicator",
+    "description": "Use when preparing roadmap narratives, release notes, changelogs, or stakeholder updates tailored for executives, engineering teams, and customers.",
+    "source": "roadmap-communicator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "run",
+    "description": "Run a single experiment iteration. Edit the target file, evaluate, keep or discard.",
+    "source": "run",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "runbook-generator",
+    "description": "Runbook Generator",
+    "source": "runbook-generator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "rust-engineer",
+    "description": "Writes, reviews, and debugs idiomatic Rust code with memory safety and zero-cost abstractions. Implements ownership patterns, manages lifetimes, designs trait hierarchies, builds async applications with tokio, and structures error handling with Result/Option. Use when building Rust applications, solving ownership or borrowing issues, designing trait-based APIs, implementing async/await concurrency, creating FFI bindings, or optimizing for performance and memory safety. Invoke for Rust, Cargo, ownership, borrowing, lifetimes, async Rust, tokio, zero-cost abstractions, memory safety, systems programming.",
+    "source": "rust-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "saas-metrics-coach",
+    "description": "SaaS financial health advisor. Use when a user shares revenue or customer numbers, or mentions ARR, MRR, churn, LTV, CAC, NRR, or asks how their SaaS business is doing.",
+    "source": "saas-metrics-coach",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "saas-scaffolder",
+    "description": "Generates complete, production-ready SaaS project boilerplate including authentication, database schemas, billing integration, API routes, and a working dashboard using Next.js 14+ App Router, TypeScript, Tailwind CSS, shadcn/ui, Drizzle ORM, and Stripe. Use when the user wants to create a new SaaS app, start a subscription-based web project, scaffold a Next.js application, or mentions terms like starter template, boilerplate, new project, or wiring up auth and payments.",
+    "source": "saas-scaffolder",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "sales-engineer",
+    "description": "Analyzes RFP/RFI responses for coverage gaps, builds competitive feature comparison matrices, and plans proof-of-concept (POC) engagements for pre-sales engineering. Use when responding to RFPs, bids, or proposal requests; comparing product features against competitors; planning or scoring a customer POC or sales demo; preparing a technical proposal; or performing win/loss competitor analysis. Handles tasks described as 'RFP response', 'bid response', 'proposal response', 'competitor comparison', 'feature matrix', 'POC planning', 'sales demo prep', or 'pre-sales engineering'.",
+    "source": "sales-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "salesforce-developer",
+    "description": "Writes and debugs Apex code, builds Lightning Web Components, optimizes SOQL queries, implements triggers, batch jobs, platform events, and integrations on the Salesforce platform. Use when developing Salesforce applications, customizing CRM workflows, managing governor limits, bulk processing, or setting up Salesforce DX and CI/CD pipelines.",
+    "source": "salesforce-developer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "scenario-war-room",
+    "description": "Cross-functional what-if modeling for cascading multi-variable scenarios. Unlike single-assumption stress testing, this models compound adversity across all business functions simultaneously. Use when facing complex risk scenarios, strategic decisions with major downside, or when the user asks 'what if X AND Y both happen?'",
+    "source": "scenario-war-room",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "schema-markup",
+    "description": "When the user wants to implement, audit, or validate structured data (schema markup) on their website. Use when the user mentions 'structured data,' 'schema.org,' 'JSON-LD,' 'rich results,' 'rich snippets,' 'schema markup,' 'FAQ schema,' 'Product schema,' 'HowTo schema,' or 'structured data errors in Search Console.' Also use when someone asks why their content isn't showing rich results or wants to improve AI search visibility. NOT for general SEO audits (use seo-audit) or technical SEO crawl issues (use site-architecture).",
+    "source": "schema-markup",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "scrum-master",
+    "description": "Advanced Scrum Master skill for data-driven agile team analysis and coaching. Use when the user asks about sprint planning, velocity tracking, retrospectives, standup facilitation, backlog grooming, story points, burndown charts, blocker resolution, or agile team health. Runs Python scripts to analyse sprint JSON exports from Jira or similar tools: velocity_analyzer.py for Monte Carlo sprint forecasting, sprint_health_scorer.py for multi-dimension health scoring, and retrospective_analyzer.py for action-item and theme tracking. Produces confidence-interval forecasts, health grade reports, and improvement-velocity trends for high-performing Scrum teams.",
+    "source": "scrum-master",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "secrets-vault-manager",
+    "description": "Use when the user asks to set up secret management infrastructure, integrate HashiCorp Vault, configure cloud secret stores (AWS Secrets Manager, Azure Key Vault, GCP Secret Manager), implement secret rotation, or audit secret access patterns.",
+    "source": "secrets-vault-manager",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "secure-code-guardian",
+    "description": "Use when implementing authentication/authorization, securing user input, or preventing OWASP Top 10 vulnerabilities \u2014 including custom security implementations such as hashing passwords with bcrypt/argon2, sanitizing SQL queries with parameterized statements, configuring CORS/CSP headers, validating input with Zod, and setting up JWT tokens. Invoke for authentication, authorization, input validation, encryption, OWASP Top 10 prevention, secure session management, and security hardening. For pre-built OAuth/SSO integrations or standalone security audits, consider a more specialized skill.",
+    "source": "secure-code-guardian",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "security-pen-testing",
+    "description": "Use when the user asks to perform security audits, penetration testing, vulnerability scanning, OWASP Top 10 checks, or offensive security assessments. Covers static analysis, dependency scanning, secret detection, API security testing, and pen test report generation.",
+    "source": "security-pen-testing",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "security-reviewer",
+    "description": "Identifies security vulnerabilities, generates structured audit reports with severity ratings, and provides actionable remediation guidance. Use when conducting security audits, reviewing code for vulnerabilities, or analyzing infrastructure security. Invoke for SAST scans, penetration testing, DevSecOps practices, cloud security reviews, dependency audits, secrets scanning, or compliance checks. Produces vulnerability reports, prioritized recommendations, and compliance checklists.",
+    "source": "security-reviewer",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "self-eval",
+    "description": "Honestly evaluate AI work quality using a two-axis scoring system. Use after completing a task, code review, or work session to get an unbiased assessment. Detects score inflation, forces devil's advocate reasoning, and persists scores across sessions.",
+    "source": "self-eval",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "self-improving-agent",
+    "description": "Curate Claude Code's auto-memory into durable project knowledge. Analyze MEMORY.md for patterns, promote proven learnings to CLAUDE.md and .claude/rules/, extract recurring solutions into reusable skills. Use when: (1) reviewing what Claude has learned about your project, (2) graduating a pattern from notes to enforced rules, (3) turning a debugging solution into a skill, (4) checking memory health and capacity.",
+    "source": "self-improving-agent",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-architect",
+    "description": "This skill should be used when the user asks to \"design system architecture\", \"evaluate microservices vs monolith\", \"create architecture diagrams\", \"analyze dependencies\", \"choose a database\", \"plan for scalability\", \"make technical decisions\", or \"review system design\". Use for architecture decision records (ADRs), tech stack evaluation, system design reviews, dependency analysis, and generating architecture diagrams in Mermaid, PlantUML, or ASCII format.",
+    "source": "senior-architect",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-backend",
+    "description": "Designs and implements backend systems including REST APIs, microservices, database architectures, authentication flows, and security hardening. Use when the user asks to \"design REST APIs\", \"optimize database queries\", \"implement authentication\", \"build microservices\", \"review backend code\", \"set up GraphQL\", \"handle database migrations\", or \"load test APIs\". Covers Node.js/Express/Fastify development, PostgreSQL optimization, API security, and backend architecture patterns.",
+    "source": "senior-backend",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-computer-vision",
+    "description": "Computer vision engineering skill for object detection, image segmentation, and visual AI systems. Covers CNN and Vision Transformer architectures, YOLO/Faster R-CNN/DETR detection, Mask R-CNN/SAM segmentation, and production deployment with ONNX/TensorRT. Includes PyTorch, torchvision, Ultralytics, Detectron2, and MMDetection frameworks. Use when building detection pipelines, training custom models, optimizing inference, or deploying vision systems.",
+    "source": "senior-computer-vision",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-data-engineer",
+    "description": "Data engineering skill for building scalable data pipelines, ETL/ELT systems, and data infrastructure. Expertise in Python, SQL, Spark, Airflow, dbt, Kafka, and modern data stack. Includes data modeling, pipeline orchestration, data quality, and DataOps. Use when designing data architectures, building data pipelines, optimizing data workflows, implementing data governance, or troubleshooting data issues.",
+    "source": "senior-data-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-data-scientist",
+    "description": "World-class senior data scientist skill specialising in statistical modeling, experiment design, causal inference, and predictive analytics. Covers A/B testing (sample sizing, two-proportion z-tests, Bonferroni correction), difference-in-differences, feature engineering pipelines (Scikit-learn, XGBoost), cross-validated model evaluation (AUC-ROC, AUC-PR, SHAP), and MLflow experiment tracking \u2014 using Python (NumPy, Pandas, Scikit-learn), R, and SQL. Use when designing or analysing controlled experiments, building and evaluating classification or regression models, performing causal analysis on observational data, engineering features for structured tabular datasets, or translating statistical findings into data-driven business decisions.",
+    "source": "senior-data-scientist",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-devops",
+    "description": "Comprehensive DevOps skill for CI/CD, infrastructure automation, containerization, and cloud platforms (AWS, GCP, Azure). Includes pipeline setup, infrastructure as code, deployment automation, and monitoring. Use when setting up pipelines, deploying applications, managing infrastructure, implementing monitoring, or optimizing deployment processes.",
+    "source": "senior-devops",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-frontend",
+    "description": "Frontend development skill for React, Next.js, TypeScript, and Tailwind CSS applications. Use when building React components, optimizing Next.js performance, analyzing bundle sizes, scaffolding frontend projects, implementing accessibility, or reviewing frontend code quality.",
+    "source": "senior-frontend",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-fullstack",
+    "description": "Fullstack development toolkit with project scaffolding for Next.js, FastAPI, MERN, and Django stacks, code quality analysis with security and complexity scoring, and stack selection guidance. Use when the user asks to \"scaffold a new project\", \"create a Next.js app\", \"set up FastAPI with React\", \"analyze code quality\", \"audit my codebase\", \"what stack should I use\", \"generate project boilerplate\", or mentions fullstack development, project setup, or tech stack comparison.",
+    "source": "senior-fullstack",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-ml-engineer",
+    "description": "ML engineering skill for productionizing models, building MLOps pipelines, and integrating LLMs. Covers model deployment, feature stores, drift monitoring, RAG systems, and cost optimization. Use when the user asks about deploying ML models to production, setting up MLOps infrastructure (MLflow, Kubeflow, Kubernetes, Docker), monitoring model performance or drift, building RAG pipelines, or integrating LLM APIs with retry logic and cost controls. Focused on production and operational concerns rather than model research or initial training.",
+    "source": "senior-ml-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-pm",
+    "description": "Senior Project Manager for enterprise software, SaaS, and digital transformation projects. Specializes in portfolio management, quantitative risk analysis, resource optimization, stakeholder alignment, and executive reporting. Uses advanced methodologies including EMV analysis, Monte Carlo simulation, WSJF prioritization, and multi-dimensional health scoring. Use when a user needs help with project plans, project status reports, risk assessments, resource allocation, project roadmaps, milestone tracking, team capacity planning, portfolio health reviews, program management, or executive-level project reporting \u2014 especially for enterprise-scale initiatives with multiple workstreams, complex dependencies, or multi-million dollar budgets.",
+    "source": "senior-pm",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-prompt-engineer",
+    "description": "This skill should be used when the user asks to \"optimize prompts\", \"design prompt templates\", \"evaluate LLM outputs\", \"build agentic systems\", \"implement RAG\", \"create few-shot examples\", \"analyze token usage\", or \"design AI workflows\". Use for prompt engineering patterns, LLM evaluation frameworks, agent architectures, and structured output design.",
+    "source": "senior-prompt-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-qa",
+    "description": "Generates unit tests, integration tests, and E2E tests for React/Next.js applications. Scans components to create Jest + React Testing Library test stubs, analyzes Istanbul/LCOV coverage reports to surface gaps, scaffolds Playwright test files from Next.js routes, mocks API calls with MSW, creates test fixtures, and configures test runners. Use when the user asks to \"generate tests\", \"write unit tests\", \"analyze test coverage\", \"scaffold E2E tests\", \"set up Playwright\", \"configure Jest\", \"implement testing patterns\", or \"improve test quality\".",
+    "source": "senior-qa",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-secops",
+    "description": "Senior SecOps engineer skill for application security, vulnerability management, compliance verification, and secure development practices. Runs SAST/DAST scans, generates CVE remediation plans, checks dependency vulnerabilities, creates security policies, enforces secure coding patterns, and automates compliance checks against SOC2, PCI-DSS, HIPAA, and GDPR. Use when conducting a security review or audit, responding to a CVE or security incident, hardening infrastructure, implementing authentication or secrets management, running penetration test prep, checking OWASP Top 10 exposure, or enforcing security controls in CI/CD pipelines.",
+    "source": "senior-secops",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "senior-security",
+    "description": "Security engineering toolkit for threat modeling, vulnerability analysis, secure architecture, and penetration testing. Includes STRIDE analysis, OWASP guidance, cryptography patterns, and security scanning tools. Use when the user asks about security reviews, threat analysis, vulnerability assessments, secure coding practices, security audits, attack surface analysis, CVE remediation, or security best practices.",
+    "source": "senior-security",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "seo-audit",
+    "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \"SEO audit,\" \"technical SEO,\" \"why am I not ranking,\" \"SEO issues,\" \"on-page SEO,\" \"meta tags review,\" or \"SEO health check.\" For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup.",
+    "source": "seo-audit",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "setup",
+    "description": "Set up a new autoresearch experiment interactively. Collects domain, target file, eval command, metric, direction, and evaluator.",
+    "source": "setup",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "shopify-expert",
+    "description": "Builds and debugs Shopify themes (.liquid files, theme.json, sections), develops custom Shopify apps (shopify.app.toml, OAuth, webhooks), and implements Storefront API integrations for headless storefronts. Use when building or customizing Shopify themes, creating Hydrogen or custom React storefronts, developing Shopify apps, implementing checkout UI extensions or Shopify Functions, optimizing performance, or integrating third-party services. Invoke for Liquid templating, Storefront API, app development, checkout customization, Shopify Plus features, App Bridge, Polaris, or Shopify CLI workflows.",
+    "source": "shopify-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "signup-flow-cro",
+    "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \"signup conversions,\" \"registration friction,\" \"signup form optimization,\" \"free trial signup,\" \"reduce signup dropoff,\" or \"account creation flow.\" For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
+    "source": "signup-flow-cro",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "site-architecture",
+    "description": "When the user wants to audit, redesign, or plan their website's structure, URL hierarchy, navigation design, or internal linking strategy. Use when the user mentions 'site architecture,' 'URL structure,' 'internal links,' 'site navigation,' 'breadcrumbs,' 'topic clusters,' 'hub pages,' 'orphan pages,' 'silo structure,' 'information architecture,' or 'website reorganization.' Also use when someone has SEO problems and the root cause is structural (not content or schema). NOT for content strategy decisions about what to write (use content-strategy) or for schema markup (use schema-markup).",
+    "source": "site-architecture",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "skill-security-auditor",
+    "description": ">",
+    "source": "skill-security-auditor",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "skill-suggest",
+    "description": "Scan the current project's files and task description to suggest relevant skills, auto-demote unused ones to name-only, and offer to search online registries (skills.sh, clawhub.ai). Run at the start of each project.",
+    "source": "skill-suggest",
+    "state": "on",
+    "agents": [
+      "Claude Code"
+    ]
+  },
+  {
+    "name": "skill-tester",
+    "description": "Skill Tester",
+    "source": "skill-tester",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "soc2-compliance",
+    "description": "Use when the user asks to prepare for SOC 2 audits, map Trust Service Criteria, build control matrices, collect audit evidence, perform gap analysis, or assess SOC 2 Type I vs Type II readiness.",
+    "source": "soc2-compliance",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "social-content",
+    "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' or 'viral content.' This skill covers content creation, repurposing, and platform-specific strategies.",
+    "source": "social-content",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "social-media-analyzer",
+    "description": "Social media campaign analysis and performance tracking. Calculates engagement rates, ROI, and benchmarks across platforms. Use for analyzing social media performance, calculating engagement rate, measuring campaign ROI, comparing platform metrics, or benchmarking against industry standards.",
+    "source": "social-media-analyzer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "social-media-manager",
+    "description": "When the user wants to develop social media strategy, plan content calendars, manage community engagement, or grow their social presence across platforms. Also use when the user mentions 'social media strategy,' 'social calendar,' 'community management,' 'social media plan,' 'grow followers,' 'engagement rate,' 'social media audit,' or 'which platforms should I use.' For writing individual social posts, see social-content. For analyzing social performance data, see social-media-analyzer.",
+    "source": "social-media-manager",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spark-engineer",
+    "description": "Use when writing Spark jobs, debugging performance issues, or configuring cluster settings for Apache Spark applications, distributed data processing pipelines, or big data workloads. Invoke to write DataFrame transformations, optimize Spark SQL queries, implement RDD pipelines, tune shuffle operations, configure executor memory, process .parquet files, handle data partitioning, or build structured streaming analytics.",
+    "source": "spark-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spawn",
+    "description": "Launch N parallel subagents in isolated git worktrees to compete on the session task.",
+    "source": "spawn",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spec-driven-workflow",
+    "description": "Use when the user asks to write specs before code, define acceptance criteria, plan features before implementation, generate tests from specifications, or follow spec-first development practices.",
+    "source": "spec-driven-workflow",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spec-miner",
+    "description": "Reverse-engineering specialist that extracts specifications from existing codebases. Use when working with legacy or undocumented systems, inherited projects, or old codebases with no documentation. Invoke to map code dependencies, generate API documentation from source, identify undocumented business logic, figure out what code does, or create architecture documentation from implementation. Trigger phrases: reverse engineer, old codebase, no docs, no documentation, figure out how this works, inherited project, legacy analysis, code archaeology, undocumented features.",
+    "source": "spec-miner",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spec-to-repo",
+    "description": "Use when the user says 'build me an app', 'create a project from this spec', 'scaffold a new repo', 'generate a starter', 'turn this idea into code', 'bootstrap a project', 'I have requirements and need a codebase', or provides a natural-language project specification and expects a complete, runnable repository. Stack-agnostic: Next.js, FastAPI, Rails, Go, Rust, Flutter, and more.",
+    "source": "spec-to-repo",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "spring-boot-engineer",
+    "description": "Generates Spring Boot 3.x configurations, creates REST controllers, implements Spring Security 6 authentication flows, sets up Spring Data JPA repositories, and configures reactive WebFlux endpoints. Use when building Spring Boot 3.x applications, microservices, or reactive Java applications; invoke for Spring Data JPA, Spring Security 6, WebFlux, Spring Cloud integration, Java REST API design, or Microservices Java architecture.",
+    "source": "spring-boot-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "sql-database-assistant",
+    "description": "Use when the user asks to write SQL queries, optimize database performance, generate migrations, explore database schemas, or work with ORMs like Prisma, Drizzle, TypeORM, or SQLAlchemy.",
+    "source": "sql-database-assistant",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "sql-pro",
+    "description": "Optimizes SQL queries, designs database schemas, and troubleshoots performance issues. Use when a user asks why their query is slow, needs help writing complex joins or aggregations, mentions database performance issues, or wants to design or migrate a schema. Invoke for complex queries, window functions, CTEs, indexing strategies, query plan analysis, covering index creation, recursive queries, EXPLAIN/ANALYZE interpretation, before/after query benchmarking, or migrating queries between database dialects (PostgreSQL, MySQL, SQL Server, Oracle).",
+    "source": "sql-pro",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "sre-engineer",
+    "description": "Defines service level objectives, creates error budget policies, designs incident response procedures, develops capacity models, and produces monitoring configurations and automation scripts for production systems. Use when defining SLIs/SLOs, managing error budgets, building reliable systems at scale, incident management, chaos engineering, toil reduction, or capacity planning.",
+    "source": "sre-engineer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "statistical-analyst",
+    "description": "Run hypothesis tests, analyze A/B experiment results, calculate sample sizes, and interpret statistical significance with effect sizes. Use when you need to validate whether observed differences are real, size an experiment correctly before launch, or interpret test results with confidence.",
+    "source": "statistical-analyst",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "status",
+    "description": "Memory health dashboard showing line counts, topic files, capacity, stale entries, and recommendations.",
+    "source": "status",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "strategic-alignment",
+    "description": "Cascades strategy from boardroom to individual contributor. Detects and fixes misalignment between company goals and team execution. Covers strategy articulation, cascade mapping, orphan goal detection, silo identification, communication gap analysis, and realignment protocols. Use when teams are pulling in different directions, OKRs don't connect, departments optimize locally at company expense, or when user mentions alignment, strategy cascade, silo, conflicting OKRs, or strategy communication.",
+    "source": "strategic-alignment",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "stress-test",
+    "description": "/em -stress-test \u2014 Business Assumption Stress Testing",
+    "source": "stress-test",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "stripe-integration-expert",
+    "description": "Stripe Integration Expert",
+    "source": "stripe-integration-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "swift-expert",
+    "description": "Builds iOS/macOS/watchOS/tvOS applications, implements SwiftUI views and state management, designs protocol-oriented architectures, handles async/await concurrency, implements actors for thread safety, and debugs Swift-specific issues. Use when building iOS/macOS applications with Swift 5.9+, SwiftUI, or async/await concurrency. Invoke for protocol-oriented programming, SwiftUI state management, actors, server-side Swift, UIKit integration, Combine, or Vapor.",
+    "source": "swift-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "tc-tracker",
+    "description": "Use when the user asks to track technical changes, create change records, manage TC lifecycles, or hand off work between AI sessions. Covers init/create/update/status/resume/close/export workflows for structured code change documentation.",
+    "source": "tc-tracker",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "tdd-guide",
+    "description": "Test-driven development skill for writing unit tests, generating test fixtures and mocks, analyzing coverage gaps, and guiding red-green-refactor workflows across Jest, Pytest, JUnit, Vitest, and Mocha. Use when the user asks to write tests, improve test coverage, practice TDD, generate mocks or stubs, or mentions testing frameworks like Jest, pytest, or JUnit.",
+    "source": "tdd-guide",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "team-communications",
+    "description": "Write internal company communications \u2014 3P updates (Progress/Plans/Problems), company-wide newsletters, FAQ roundups, incident reports, leadership updates, status reports, project updates, and general internal comms. Use this skill any time the user asks to draft, edit, or format something meant for internal audiences. Trigger on keywords like \"3P\", \"weekly update\", \"newsletter\", \"FAQ\", \"internal comms\", \"status report\", \"company update\", \"team update\", \"incident report\", or any request to summarize work for leadership, teammates, or the broader company. Even casual requests like \"write my update\" or \"summarize what my team did this week\" should trigger this skill.",
+    "source": "team-communications",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "tech-debt-tracker",
+    "description": "Scan codebases for technical debt, score severity, track trends, and generate prioritized remediation plans. Use when users mention tech debt, code quality, refactoring priority, debt scoring, cleanup sprints, or code health assessment. Also use for legacy code modernization planning and maintenance cost estimation.",
+    "source": "tech-debt-tracker",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "tech-stack-evaluator",
+    "description": "Technology stack evaluation and comparison with TCO analysis, security assessment, and ecosystem health scoring. Use when comparing frameworks, evaluating technology stacks, calculating total cost of ownership, assessing migration paths, or analyzing ecosystem viability.",
+    "source": "tech-stack-evaluator",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "terraform-engineer",
+    "description": "Use when implementing infrastructure as code with Terraform across AWS, Azure, or GCP. Invoke for module development (create reusable modules, manage module versioning), state management (migrate backends, import existing resources, resolve state conflicts), provider configuration, multi-environment workflows, and infrastructure testing.",
+    "source": "terraform-engineer",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "terraform-patterns",
+    "description": "Terraform infrastructure-as-code agent skill and plugin for Claude Code, Codex, Gemini CLI, Cursor, OpenClaw. Covers module design patterns, state management strategies, provider configuration, security hardening, policy-as-code with Sentinel/OPA, and CI/CD plan/apply workflows. Use when: user wants to design Terraform modules, manage state backends, review Terraform security, implement multi-region deployments, or follow IaC best practices.",
+    "source": "terraform-patterns",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "test-master",
+    "description": "Generates test files, creates mocking strategies, analyzes code coverage, designs test architectures, and produces test plans and defect reports across functional, performance, and security testing disciplines. Use when writing unit tests, integration tests, or E2E tests; creating test strategies or automation frameworks; analyzing coverage gaps; performance testing with k6 or Artillery; security testing with OWASP methods; debugging flaky tests; or working on QA, regression, test automation, quality gates, shift-left testing, or test maintenance.",
+    "source": "test-master",
+    "state": "name-only",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "testrail",
+    "description": ">-",
+    "source": "testrail",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "the-fool",
+    "description": "Use when challenging ideas, plans, decisions, or proposals using structured critical reasoning. Invoke to play devil's advocate, run a pre-mortem, red team, or audit evidence and assumptions.",
+    "source": "the-fool",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "threat-detection",
+    "description": "Use when hunting for threats in an environment, analyzing IOCs, or detecting behavioral anomalies in telemetry. Covers hypothesis-driven threat hunting, IOC sweep generation, z-score anomaly detection, and MITRE ATT&CK-mapped signal prioritization.",
+    "source": "threat-detection",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "typescript-pro",
+    "description": "Implements advanced TypeScript type systems, creates custom type guards, utility types, and branded types, and configures tRPC for end-to-end type safety. Use when building TypeScript applications requiring advanced generics, conditional or mapped types, discriminated unions, monorepo setup, or full-stack type safety with tRPC.",
+    "source": "typescript-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ui-design-system",
+    "description": "UI design system toolkit for Senior UI Designer including design token generation, component documentation, responsive design calculations, and developer handoff tools. Use for creating design systems, maintaining visual consistency, and facilitating design-dev collaboration.",
+    "source": "ui-design-system",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "ux-researcher-designer",
+    "description": "UX research and design toolkit for Senior UX Designer/Researcher including data-driven persona generation, journey mapping, usability testing frameworks, and research synthesis. Use for user research, persona creation, journey mapping, and design validation.",
+    "source": "ux-researcher-designer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "vue-expert",
+    "description": "Builds Vue 3 components with Composition API patterns, configures Nuxt 3 SSR/SSG projects, sets up Pinia stores, scaffolds Quasar/Capacitor mobile apps, implements PWA features, and optimises Vite builds. Use when creating Vue 3 applications with Composition API, writing reusable composables, managing state with Pinia, building hybrid mobile apps with Quasar or Capacitor, configuring service workers, or tuning Vite configuration and TypeScript integration.",
+    "source": "vue-expert",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "vue-expert-js",
+    "description": "Creates Vue 3 components, builds vanilla JS composables, configures Vite projects, and sets up routing and state management using JavaScript only \u2014 no TypeScript. Generates JSDoc-typed code with @typedef, @param, and @returns annotations for full type coverage without a TS compiler. Use when building Vue 3 applications with JavaScript only (no TypeScript), when projects require JSDoc-based type hints, when migrating from Vue 2 Options API to Composition API in JS, or when teams prefer vanilla JavaScript, .mjs modules, or need quick prototypes without TypeScript setup.",
+    "source": "vue-expert-js",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "websocket-engineer",
+    "description": "Use when building real-time communication systems with WebSockets or Socket.IO. Invoke for bidirectional messaging, horizontal scaling with Redis, presence tracking, room management.",
+    "source": "websocket-engineer",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "wordpress-pro",
+    "description": "Develops custom WordPress themes and plugins, creates and registers Gutenberg blocks and block patterns, configures WooCommerce stores, implements WordPress REST API endpoints, applies security hardening (nonces, sanitization, escaping, capability checks), and optimizes performance through caching and query tuning. Use when building WordPress themes, writing plugins, customizing Gutenberg blocks, extending WooCommerce, working with ACF, using the WordPress REST API, applying hooks and filters, or improving WordPress performance and security.",
+    "source": "wordpress-pro",
+    "state": "on",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "x-twitter-growth",
+    "description": "X/Twitter growth engine for building audience, crafting viral content, and analyzing engagement. Use when the user wants to grow on X/Twitter, write tweets or threads, analyze their X profile, research competitors on X, plan a posting strategy, or optimize engagement. Complements social-content (generic multi-platform) with X-specific depth: algorithm mechanics, thread engineering, reply strategy, profile optimization, and competitive intelligence via web search.",
+    "source": "x-twitter-growth",
+    "state": "off",
+    "agents": [
+      "Claude Code",
+      "OpenClaw",
+      "Devin for Terminal",
+      "Droid",
+      "Pi",
+      "Windsurf"
+    ]
+  },
+  {
+    "name": "release-note",
+    "description": "Track and log changes to a RELEASE_NOTES.md file in the current project. Use when the user says \"log this change\", \"add to release notes\", \"release-note\", or when they complete a feature or fix and want to record it. Also handles promoting unreleased changes to a versioned release.",
+    "source": "release-note",
+    "state": "name-only",
+    "agents": [
+      "Claude Code"
+    ]
+  }
+]
