@@ -8,12 +8,12 @@ No more guessing which skills to activate. Point it at your project and it tells
 
 ## What It Does
 
-1. **Scans your project** — detects file types, frameworks, and config files (`wp-config.php`, `docker-compose.yml`, `playwright.config.*`, `*.tf`, `tsconfig.json`, etc.)
-2. **Reads your installed skills** — checks `~/.claude/skills/` for everything already available
-3. **Fetches the online registry** — always queries the [anthropics/claude-code-skills](https://github.com/anthropics/claude-code-skills) registry for the full skill list
-4. **Scores and ranks** — cross-references detected stack + optional task description to produce a ranked top-8 list
-5. **Labels results clearly** — `[installed]` vs `[not installed]` with ready-to-run install commands
-6. **Offers to update CLAUDE.md** — can write an `## Active Skills` table directly into your project's `CLAUDE.md`
+1. **Scans your project** — detects file types, frameworks, and path context (e.g., `/api` vs `/ui`)
+2. **Smart Orchestration** — uses an "Enough" heuristic to stop early if it finds clear matches, saving time and tokens
+3. **Reads your installed skills** — checks `~/.claude/skills/` and project-local `.claude/skills/`
+4. **Conditional Registry Fetch** — only hits the online registry if local results are sparse or if you use `online` mode
+5. **Labels results clearly** — `[installed]`, `[project-local]`, vs `[not installed]`
+6. **Directory-Scoped Activation** — offers to write `## Active Skills` to the root OR a local `CLAUDE.md` for folder-specific skill sets
 
 ---
 
@@ -46,15 +46,11 @@ Then add to your `~/.claude/settings.json`:
 
 ## Usage
 
+```bash
+/skill-suggest           # Fast Mode: Scans project + local skills (instant)
+/skill-suggest online    # Online Mode: Also searches the official registry
+/skill-suggest "task"    # Task Mode: Scans project + weights toward your task
 ```
-/skill-suggest
-```
-Scans the current directory and suggests skills based on detected stack. Also checks the online registry.
-
-```
-/skill-suggest "your task description"
-```
-Same scan + registry fetch, but weights suggestions toward your specific task.
 
 ### Examples
 
@@ -92,22 +88,21 @@ Want me to add these to your CLAUDE.md as an ## Active Skills table? (yes/no)
 
 ## The `## Active Skills` Pattern
 
-This skill can write a persistent skill table into your project's `CLAUDE.md`. Claude reads `CLAUDE.md` automatically on every session start, so it knows which skills are relevant without you having to invoke them manually each time.
+This skill can write a persistent skill table into your project's `CLAUDE.md`. Claude reads `CLAUDE.md` automatically on every session start.
 
-Example table it generates:
+**New:** You can now save these to a subdirectory `CLAUDE.md` (e.g., `src/api/CLAUDE.md`). This ensures that specific skills (like `sql-pro`) only activate when you are working in that specific part of the codebase.
 
-```markdown
-## Active Skills
+---
 
-| Skill | When to use |
-|---|---|
-| `wordpress-pro` | Theme/plugin edits, WP-CLI tasks |
-| `playwright-pro` | E2E test writing and debugging |
-| `security-reviewer` | Before any push to live server |
-| `php-pro` | Custom PHP in themes or functions.php |
+## Update
+
+To get the latest improvements (Smart Orchestration, directory-scoped activation, etc.), run:
+
+```bash
+npx skills update skill-suggest
 ```
 
-Once this is in your `CLAUDE.md`, Claude will proactively suggest these skills when the context matches — no manual invocation needed.
+If you installed manually via `curl`, simply re-run the `curl` command from the [Install](#install) section.
 
 ---
 
@@ -115,6 +110,10 @@ Once this is in your `CLAUDE.md`, Claude will proactively suggest these skills w
 
 | Detected signal | Skills suggested |
 |---|---|
+| path contains `api`/`server` | `senior-backend`, `sql-pro`, `api-designer` |
+| path contains `ui`/`frontend` | `senior-frontend`, `react-expert`, `vue-expert` |
+| `package.json` has `stripe` | `stripe-integration-expert` |
+| `package.json` has `tailwind` | `ui-design-system` |
 | `wp-config.php` / `functions.php` | `wordpress-pro`, `php-pro`, `security-reviewer` |
 | `playwright.config.*` | `playwright-pro` |
 | `docker-compose.yml` | `docker-development`, `devops-engineer` |
